@@ -1,0 +1,199 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
+/* 共通 ----- */
+html {
+  font-size: 125%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ----- 共通 */
+footer {
+  background-color: #c07d7d;
+  height: 150px;
+  width: 75%;
+  margin: 0 0 0 auto;
+  text-align: center;
+  line-height: 150px;
+}
+
+.content70 {
+  width: 75%;
+  margin: 0 0 0 auto;
+}
+
+/* header ----- */
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.header__content {
+  width: 25%;
+  height: 100VH;
+  background-color: #1B1310;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 26px;
+  color: white;
+  padding: 120px 0;
+}
+
+.header__lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+}
+
+.header__lists-PCNone {
+  display: none;
+}
+
+.header__lists li {
+  padding-top: 50px;
+}
+
+.header__list-link {
+  color: white;
+}
+
+/* ----- header */
+/* ハンバーガーメニュー */
+.hamburger-btn {
+  position: relative;
+  /* buttonタグを起点にしてspanタグの位置を決める */
+  width: 40px;
+  height: 30px;
+  transition: all .4s;
+  /* アニメーション速度 */
+  border: none;
+  /* buttonタグの装飾を消去 */
+  outline: none;
+  /* buttonタグの装飾を消去 */
+  background: transparent;
+  /* buttonタグの装飾を消去 */
+  display: none;
+}
+
+.hamburger-btn span {
+  /* すべての線に共通のスタイル */
+  display: inline-block;
+  transition: all .4s;
+  /* アニメーション速度 */
+  position: absolute;
+  /* buttonタグから見た位置 */
+  left: 0;
+  /* buttonタグの左端に寄せる */
+  width: 100%;
+  /* 横幅をbuttonタグいっぱいに広げる(40px) */
+  height: 2px;
+  /* 線の太さ */
+  background-color: white;
+  border-radius: 4px;
+}
+
+.hamburger-btn span:nth-of-type(1) {
+  top: 0;
+  /* 一番上の線の位置 */
+}
+
+.hamburger-btn span:nth-of-type(2) {
+  top: 15px;
+  /* 真ん中の線の位置 */
+}
+
+.hamburger-btn span:nth-of-type(3) {
+  bottom: 0;
+  /* 一番下の線の位置 */
+}
+
+/* ハンバーガーメニュー */
+.fv {
+  height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 20px 60px 20px;
+  background-color: #333;
+}
+
+.fv__title {
+  font-size: 250%;
+  color: white;
+  -webkit-text-stroke: 1.5px #0f0;
+}
+
+section {
+  margin-bottom: 150px;
+}
+
+.section__title, .contact__title {
+  font-size: 200%;
+  padding-bottom: 60px;
+}
+
+#page_top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #ef3f98;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+#page_top a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+
+#page_top a::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f106';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cresta Design.</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+
+      <div class="header__content">
+        <h1 class="header__title">クリ★スタ</h1>
+
+        <!-- ここからハンバーガーメニューアイコン -->
+        <button class="hamburger-btn" type="button">
+          <span></span>  <!-- 一番上の線 -->
+          <span></span>  <!-- 真ん中の線 -->
+          <span></span>  <!-- 一番下の線 -->
+        </button>
+
+        <nav class="header__navList">
+          <ul class="header__lists">
+            <li><a href="" class="header__list-link">About</a></li>
+            <li class="header__list"><a href="" class="header__list-link">Service</a></li>
+            <li class="header__lists-PCNone"><a href="" class="header__list-link">News</a></li>
+            <li><a href="" class="header__list-link">Contents</a></li>
+          </ul>
+        </nav>
+
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <div class="content70">
+    <section class="fv">
+      <h1 class="fv__title">Cresta Design.</h1>
+    </section>
+
+    <section id="about">
+      <div class="about ef">
+        <h2 class="section__title">About</h2>
+        <div class="about__wrap">
+          <h3 class="about__text">ミニマルで<br>
+          洗練されたデザインを。</h3>
+          <p class="about__paragraph">近年、ミニマルなデザインが流行しています。そこで弊社では、クライアント企業様新規サービス等の課題に対してミニマルで洗練されたデザインを実現させることで解決のサポートを致します。もちろん全てのサービスにおいてミニマルなデザインが課題解決になるわけではないので、課題や今後のサービスの展開等しっかりとヒアリングを行なった上でご提案させて頂きます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="service ef">
+      <h2 class="section__title">Service</h2>
+
+      <div class="service__wrap">
+        <div class="service__imgContent">
+          <img class="service__img" src="img/service-image@2x.jpg" alt="黒いカメラ">
+        </div>
+        <div class="service__content">
+          <h3 class="service__description">リリース時のサポートで<br>サービスのブランディングを</h3>
+          <p class="service__text">弊社では、リリース時もサポートさせて頂きます。プレスリリース用のサイトや動画制作を通して、サービスのブランディングを行わせて頂きます。</p>
+        </div>
+      </div>
+
+      <div class="service__wrap reverse">
+        <div class="service__imgContent">
+          <img class="service__img" src="img/service-image02@2x.jpg" alt="黒い携帯">
+        </div>
+        <div class="service__content return">
+          <h3 class="service__description">リリース後のサポートで<br>効果を最大化させる<br></h3>
+          <p class="service__text">弊社では、リリース後もサポートさせて頂きます。サービスはリリース後に様々な課題にぶつかります。そこでクライアント様と一緒に改善を行うことで、デザインの効果を最大化させます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="news ef">
+      <h2 class="section__title">News</h2>
+      
+      <div class="news__wrap">
+        <article class="news__content">
+          <img src="img\card-image1@2x.jpg" alt="ニュース画像１" width="320px">
+          <p class="news__text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+        </article>
+  
+        <article class="news__content margin">
+          <img src="img\card-image2@2x.jpg" alt="ニュース画像２" width="320px">
+          <p class="news__text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+        </article>
+  
+        <article class="news__content">
+          <img src="img\card-image3@2x.jpg" alt="ニュース画像３" width="320px">
+          <p class="news__text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+        </article>
+      </div>
+      </section>
+
+      <section id="contact" class="contact ef">
+        <h2 class="contact__title">お問い合わせ</h2>
+        <form action="confirm.php" method="post">
+          
+          <div class="contact__wrap">
+            <label for="name">担当者名</label>
+            <input id="name" type="text" name="yourName">
+          </div>
+
+          <div class="contact__wrap">
+            <label for="telNumber">電話番号</label>
+            <input id="telNumber" type="tel" name="yourTelNumber">
+          </div>
+          
+          <div class="contact__wrap">
+            <label for="mail">メールアドレス</label>
+            <input id="mail" type="email" name="yourEmail">
+          </div>
+
+          <div class="contact__wrap">
+            <label for="text">お問い合わせ内容</label>
+            <br>
+            <textarea id="text"></textarea>
+          </div>
+
+          <button type="submit" class="contact__button">送信</button>
+
+        </form>
+      </section>
+    </div>
+
+    <div id="page_top"><a href="#"></a></div>
+  </main>
+
+  <footer class="footer">
+    <small>&copy;crest.design all rights reserved</small>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+  </script><!-- jQueryの読み込み -->
+  <script src="script.js"></script>
+  <!-- JavaScriptの読み込み -->
+</body>
+</html>
