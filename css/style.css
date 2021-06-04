@@ -196,4 +196,55 @@ section {
   margin: auto;
   text-align: center;
 }
+
+.fv__scroll {
+  color: #fff;
+  font-size: 150%;
+  display: inline-block;
+  position: absolute;
+  bottom: 100px;
+  padding-top: 100px;
+  transform: translate(0, -50%);
+}
+
+.fv__scroll .fv__scrollBtn {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 46px;
+  height: 46px;
+  margin-left: -23px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  animation: sdb 2s infinite;
+  box-sizing: border-box;
+}
+
+.fv__scroll .fv__scrollBtn::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin: -12px 0 0 -8px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+@keyframes sdb {
+  0% {
+    transform: rotate(0deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg) translate(0px, 20px);
+    opacity: 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
