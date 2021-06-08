@@ -247,4 +247,72 @@ section {
     opacity: 0;
   }
 }
+
+.about {
+  padding-left: 200px;
+  position: relative;
+  padding-bottom: 150px;
+}
+
+.about__text {
+  padding-top: 388px;
+  padding-bottom: 57px;
+  line-height: 2.0;
+  z-index: 2;
+}
+
+.about__bgImg {
+  position: absolute;
+  top: 200px;
+  left: -130px;
+  z-index: -1;
+}
+
+.menu {
+  margin-top: 100px;
+  padding-left: 82px;
+  padding-top: 178px;
+  padding-bottom: 75px;
+  background-color: #FCFAF5;
+}
+
+.menu .menu__priceLists {
+  background-color: pink;
+  background-color: #fff;
+  border-radius: 50px;
+  width: 85%;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu .menu__priceList {
+  width: 45%;
+  margin-right: 40px;
+  margin-bottom: 60px;
+}
+
+.menu__priceTitle {
+  font-size: 130%;
+  border-bottom: 2px solid #584F4F;
+}
+
+.menu__price {
+  padding: 20px 0;
+  border-bottom: 1px solid #584F4F;
+}
+
+.access {
+  padding-left: 83px;
+}
+
+.access .menu__priceList {
+  margin: 60px auto;
+  width: 711px;
+}
+
+.access .map {
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */
