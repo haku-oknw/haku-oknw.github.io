@@ -1,155 +1,14 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
-/* 共通 ----- */
-html {
-  font-size: 125%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul {
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: bottom;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-/* ----- 共通 */
-footer {
-  background-color: #c07d7d;
-  height: 150px;
-  width: 75%;
+/* 変数定義 */
+/* Width */
+/* height */
+/* Color */
+/* header_Color */
+.inner {
+  max-width: calc(100% - 200px);
   margin: 0 0 0 auto;
-  text-align: center;
-  line-height: 150px;
-}
-
-.content70 {
-  width: 75%;
-  margin: 0 0 0 auto;
-}
-
-/* header ----- */
-.header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
-
-.header__content {
-  width: 25%;
-  height: 100VH;
-  background-color: #1B1310;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.header__title {
-  font-size: 26px;
-  color: white;
-  padding: 120px 0;
-}
-
-.header__lists {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-height: 100%;
-}
-
-.header__lists-PCNone {
-  display: none;
-}
-
-.header__lists li {
-  padding-top: 50px;
-}
-
-.header__list-link {
-  color: white;
-}
-
-/* ----- header */
-/* ハンバーガーメニュー */
-.hamburger-btn {
-  position: relative;
-  /* buttonタグを起点にしてspanタグの位置を決める */
-  width: 40px;
-  height: 30px;
-  transition: all .4s;
-  /* アニメーション速度 */
-  border: none;
-  /* buttonタグの装飾を消去 */
-  outline: none;
-  /* buttonタグの装飾を消去 */
-  background: transparent;
-  /* buttonタグの装飾を消去 */
-  display: none;
-}
-
-.hamburger-btn span {
-  /* すべての線に共通のスタイル */
-  display: inline-block;
-  transition: all .4s;
-  /* アニメーション速度 */
-  position: absolute;
-  /* buttonタグから見た位置 */
-  left: 0;
-  /* buttonタグの左端に寄せる */
-  width: 100%;
-  /* 横幅をbuttonタグいっぱいに広げる(40px) */
-  height: 2px;
-  /* 線の太さ */
-  background-color: white;
-  border-radius: 4px;
-}
-
-.hamburger-btn span:nth-of-type(1) {
-  top: 0;
-  /* 一番上の線の位置 */
-}
-
-.hamburger-btn span:nth-of-type(2) {
-  top: 15px;
-  /* 真ん中の線の位置 */
-}
-
-.hamburger-btn span:nth-of-type(3) {
-  bottom: 0;
-  /* 一番下の線の位置 */
-}
-
-/* ハンバーガーメニュー */
-.fv {
-  height: calc(100vh - 40px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 20px 20px 60px 20px;
-  background-color: #333;
-}
-
-.fv__title {
-  font-size: 250%;
-  color: white;
-  -webkit-text-stroke: 1.5px #0f0;
+  background-color: red;
+  z-index: -1;
 }
 
 section {
@@ -248,71 +107,111 @@ section {
   }
 }
 
-.about {
-  padding-left: 200px;
-  position: relative;
-  padding-bottom: 150px;
-}
-
-.about__text {
-  padding-top: 388px;
-  padding-bottom: 57px;
-  line-height: 2.0;
-  z-index: 2;
-}
-
-.about__bgImg {
+/* header ----- */
+.header {
   position: absolute;
-  top: 200px;
-  left: -130px;
-  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
-.menu {
-  margin-top: 100px;
-  padding-left: 82px;
-  padding-top: 178px;
-  padding-bottom: 75px;
-  background-color: #FCFAF5;
+.header-content {
+  width: 200px;
+  height: 100vh;
+  background-color: #faf9f7;
 }
 
-.menu .menu__priceLists {
-  background-color: pink;
-  background-color: #fff;
-  border-radius: 50px;
-  width: 85%;
-  padding: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.menu .menu__priceList {
-  width: 45%;
-  margin-right: 40px;
-  margin-bottom: 60px;
-}
-
-.menu__priceTitle {
-  font-size: 130%;
-  border-bottom: 2px solid #584F4F;
-}
-
-.menu__price {
-  padding: 20px 0;
-  border-bottom: 1px solid #584F4F;
-}
-
-.access {
-  padding-left: 83px;
-}
-
-.access .menu__priceList {
-  margin: 60px auto;
-  width: 711px;
-}
-
-.access .map {
+.header-logo {
+  padding: 40px 0;
   text-align: center;
+}
+
+.header-lists a {
+  color: #584f4f;
+  font-size: 1.6rem;
+}
+
+.header-list {
+  padding-left: 40px;
+  padding-bottom: 28px;
+}
+
+.header-navBox {
+  position: relative;
+}
+
+.header .reservation_BGcolor a, .header .contact_BGcolor a {
+  color: #584f4f;
+}
+
+.header .reservation_BGcolor, .header .contact_BGcolor {
+  width: 200px;
+  text-align: center;
+}
+
+.header .reservation_BGcolor {
+  background-color: #dcebd3;
+  margin-bottom: 30px;
+  padding: 19px 0 18px;
+  position: absolute;
+  bottom: 136px;
+}
+
+.header .contact_BGcolor {
+  background-color: #f9f3d8;
+  padding: 30px 0;
+  position: absolute;
+  bottom: 40px;
+}
+
+.header .hamburger {
+  visibility: hidden;
+}
+
+/* ----- header */
+/* fv ----- */
+.fv {
+  height: 100vh;
+  padding: 80px 40px 0px;
+  width: 100%;
+}
+
+.fv-img {
+  width: 100%;
+}
+
+.fv-text {
+  font-size: 2.6rem;
+  background-color: royalblue;
+  position: absolute;
+  bottom: 0;
+  right: 123px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  z-index: 1;
+  width: 152px;
+  height: 382px;
+  line-height: 2;
+}
+
+.fv-text .fvTxt-space {
+  padding-top: 35px;
+}
+
+.fv-colorBox {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #8bc889;
+  opacity: .8;
+  width: 449px;
+  height: 310px;
+  z-index: 0;
+  border-radius: 30px 0 0 30px;
+}
+
+/* ----- fv */
+.sp-none {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>シナジーサロン</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -12,40 +13,92 @@
 <body>
   <header>
     <div class="header">
+      <div class="header-content">
+        <h1 class="header-logo">
+          <a href="#"><img src="image/menubar_logo.png" alt="シナジーサロンのロゴ画像"></a>
+        </h1>
+        
+        
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-      <div class="header__content">
-        <h1 class="header__title">シナジーサロン</h1>
+        <nav class="header-navList globalMenuSp">
+          <ul class="header-lists">
+            <li class="header-list"><a href="#concept" class="header-listLink">こだわり</a></li>
+            <li class="header-list"><a href="#stylist" class="header-listLink">スタイリスト</a></li>
+            <li class="header-list"><a href="#menu" class="header-listLink">メニュー</a></li>
+            <li class="header-list"><a href="#hairCatalog" class="header-listLink">ヘアカタログ</a></li>
+            <li class="header-list"><a href="#access" class="header-listLink">店舗案内</a></li>
+            <li class="header-list"><a href="#questions" class="header-listLink">よくあるご質問</a></li>
+            
+            <li class="reservation_BGcolor">
+              <a href="#reservation" class="header-listLink">ご予約はこちら<br>
+                <span class="sp-none">012-345-6789</span>
+              </a>
+            </li>
+            
+            <li class="contact_BGcolor">
+              <a href="#contact" class="header-listLink">お問い合わせ</a>
+            </li>
+            
+            <div class="header-navBox"></div>
 
-        <!-- ここからハンバーガーメニューアイコン -->
-        <button class="hamburger-btn" type="button">
-          <span></span>  <!-- 一番上の線 -->
-          <span></span>  <!-- 真ん中の線 -->
-          <span></span>  <!-- 一番下の線 -->
-        </button>
-
-        <nav class="header__navList">
-          <ul class="header__lists">
-            <li><a href="" class="header__list-link">About</a></li>
-            <li class="header__list"><a href="" class="header__list-link">Service</a></li>
-            <li class="header__lists-PCNone"><a href="" class="header__list-link">News</a></li>
-            <li><a href="" class="header__list-link">Contents</a></li>
           </ul>
         </nav>
-
-      </div>
-
-    </div>
+      </div><!-- header-content -->
+    </div><!-- header -->
   </header>
-
+  
   <main>
-    <div class="content70">
-    <section class="fv">
-      <h2 class="ef">完全予約制個室ヘアサロン</h2>
-      <h1 class="fv__title">シナジーサロン</h1>
-      <a href="#about" class="fv__scroll"><span class="fv__scrollBtn"></span></a>
-    </section>
+    <div class="inner">
+      <section class="fv">
+        <img class="fv-img" src="image/firstView_Main Image.png" alt="トップ画像 お客様と美容師">
 
-    <section id="about">
+        <!-- <div class="fv-textBox"> -->
+        <!-- <a href="#about" class="fv__scroll"><span class="fv__scrollBtn"></span></a> -->
+        <!-- </div> -->
+        <h2 class="fv-text">1対1にこだわった<br class="fvTxt-space">1人だけの空間で<br>自分だけの美容時間を。</h2>
+        <div class="fv-colorBox"></div>
+      </section> <!-- fv -->
+
+    <!-- <div class="swiper-container"> -->
+      <!-- Swiper START -->
+      <!-- <div class="swiper-wrapper"> -->
+        <!-- メイン表示部分 -->
+
+        <!-- 各スライド -->
+        <!-- <div class="swiper-slide one">
+          <div class="slideTxt">
+            <h2 class="slide__Toptxt">Design for Smile.</h2>
+            <h3 class="slide__Subtxt">快適なオフィスをデザインする</h3>
+          </div>
+        </div>
+
+        <div class="swiper-slide two">
+          <div class="slideTxt">
+            <h2 class="slide__Toptxt">Design for Smile.</h2>
+            <h3 class="slide__Subtxt">〜快適なオフィスをデザインする〜</h3>
+          </div>
+        </div>
+
+        <div class="swiper-slide three">
+          <div class="slideTxt">
+            <h2 class="slide__Toptxt">Design for Smile.</h2>
+            <h3 class="slide__Subtxt">〜快適なオフィスをデザインする〜</h3>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev swiper-button-white"></div>
+      <div class="swiper-button-next swiper-button-white"></div>
+      <div class="swiper-pagination swiper-pagination-black"></div>
+    </div>Swiper END --> 
+    
+    
+
+    <!-- <section id="about">
       <div class="about">
         <h2 class="section__title"></h2>
         <div class="about__wrap">
@@ -60,7 +113,7 @@
           <img src="image/パス 2.png" alt="" class="about__bgImg">
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="menu" class="menu">
       <h3 class="section__subTitle">Menu</h2>
@@ -110,10 +163,10 @@
     </section>
 
 
-    <section id="access" class="access ef">
+    <section id="access" class="access ef"> -->
       <h2 class="section__title">店舗案内</h2>
       <div class="">
-        <img src="" alt="" height="300px" width="960px" style="background-color: gray;">
+        <img class="sp-none" src="" alt="" height="300px" width="960px" style="background-color: gray;">
       </div>
 
       <div class="menu__priceList">
@@ -128,12 +181,12 @@
         </ul>
       </div>
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.937276128209!2d139.69431894957108!3d35.65391698010348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b56a8d9035f%3A0x30cd5dcc5f858180!2z44Ki44Op44OW6aaW6ZW35Zu96YCj6YKm5aSn5L2_6aSo!5e0!3m2!1sja!2sjp!4v1623151841719!5m2!1sja!2sjp" width="840" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <iframe class="sp-none" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.937276128209!2d139.69431894957108!3d35.65391698010348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b56a8d9035f%3A0x30cd5dcc5f858180!2z44Ki44Op44OW6aaW6ZW35Zu96YCj6YKm5aSn5L2_6aSo!5e0!3m2!1sja!2sjp!4v1623151841719!5m2!1sja!2sjp" width="840" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
       </div>
     </section>
 
-    <section id="service" class="service ef">
+    <!-- <section id="service" class="service ef">
       <h2 class="section__title">Service</h2>
 
       <div class="service__wrap">
@@ -155,9 +208,9 @@
           <p class="service__text">弊社では、リリース後もサポートさせて頂きます。サービスはリリース後に様々な課題にぶつかります。そこでクライアント様と一緒に改善を行うことで、デザインの効果を最大化させます。</p>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="news" class="news ef">
+    <!-- <section id="news" class="news ef">
       <h2 class="section__title">News</h2>
       
       <div class="news__wrap">
@@ -176,7 +229,7 @@
           <p class="news__text">新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
         </article>
       </div>
-      </section>
+      </section> -->
 
       <section id="contact" class="contact ef">
         <h2 class="contact__title">お問い合わせ</h2>
@@ -207,7 +260,7 @@
 
         </form>
       </section>
-    </div>
+    </div> <!-- inner -->
 
     <div id="page_top"><a href="#"></a></div>
   </main>
