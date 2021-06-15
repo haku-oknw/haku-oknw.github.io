@@ -18,7 +18,7 @@
   .header-logo img {
     height: 80%;
   }
-  .header .header-navList {
+  .header-navList {
     height: 100vh;
     border: none;
     width: 100%;
@@ -74,8 +74,7 @@
     left: 6px;
     transform: rotate(-45deg);
   }
-  .hamburger.active span:nth-child(2),
-  .hamburger.active span:nth-child(3) {
+  .hamburger.active span:nth-child(2), .hamburger.active span:nth-child(3) {
     top: 16px;
     transform: rotate(45deg);
   }

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/*reset.css*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "游ゴシック";
+}
+
+body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+  height: auto;
+  border: 0;
+}
+
+li {
+  list-style: none;
+  list-style-position: inside;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*# sourceMappingURL=reset.css.map */
