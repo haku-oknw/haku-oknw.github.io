@@ -6,6 +6,42 @@
 /* Color */
 /* header_Color */
 /* background-color */
+/* .inner {
+  background-color: red;
+}
+
+.fv-text {
+  background-color: royalblue;
+}
+
+.message {
+  background-color: blueviolet;
+}
+
+.point {
+  background-color: brown;
+}
+
+.stylist {
+  background-color: chocolate;
+}
+
+.menu {
+  background-color: palevioletred;
+}
+
+.menu-priceLists {
+  background-color: aqua;
+}
+
+.menu-priceList {
+  background-color: cadetblue;
+}
+
+.menu-priceWrap {
+  background-color: coral;
+} */
+
 /* 共通部分 */
 .inner {
   max-width: calc(100% - 200px);
