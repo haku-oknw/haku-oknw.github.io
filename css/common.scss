@@ -1,0 +1,145 @@
+@import "variables";
+/* background-color */
+// .inner {background-color:red;}
+// .fv-text {background-color: royalblue;}
+// .message {background-color: blueviolet;}
+// .point {background-color: brown;}
+// .stylist {background-color: chocolate;}
+// .menu {
+//   background-color: palevioletred;
+//   &-priceLists {background-color: aqua;}
+//   &-priceList {background-color:cadetblue;}
+//   &-priceWrap {background-color:coral;}
+// }
+
+/* 共通部分 */
+.inner {
+  max-width: calc(100% - 200px);
+  margin: 0 0 0 auto;
+  color: $textColor;
+  z-index: -1;
+  background-color: $subColor;
+}
+.margin-left {
+  margin-left: 83px;
+}
+/* .txt-border {
+
+} */
+
+section:not(:first-child) {
+  margin-bottom: 150px;
+}
+
+.section-title, .contact__title {
+  font-size: 3rem;
+  padding-bottom: 60px;
+  color: $textColor;
+}
+
+.section-subTitle {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: $titleColor;
+  padding-bottom: 5px;
+}
+
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #ef3f98;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f106';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.fv__scroll {
+  color: #fff;
+  font-size: 150%;
+  display: inline-block;
+  position: absolute;
+  bottom: 100px;
+  padding-top: 100px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  
+  .fv__scrollBtn {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    -webkit-animation: sdb 2s infinite;
+    animation: sdb 2s infinite;
+    box-sizing: border-box;
+  }
+
+  .fv__scrollBtn::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin: -12px 0 0 -8px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+  }
+
+  @-webkit-keyframes sdb {
+    0% {
+      -webkit-transform: rotate(-45deg) translate(0, 0);
+      opacity: 0;
+    } 50% {
+      opacity: 1;
+    } 100% {
+      -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes sdb {
+    0% {
+      transform: rotate(0deg) translate(0, 0);
+      opacity: 0;
+    } 50% {
+      opacity: 1;
+    } 100% {
+      transform: rotate(0deg) translate(0px, 20px);
+      opacity: 0;
+    }
+  }
+}

@@ -11,6 +11,18 @@ $(function() {
   });
 });
 
+$(window).on('load resize', function(){
+  var winW = $(window).width();
+  var x = 768;
+  if (winW < x) {
+    //700px以下の時の処理
+    $(".hamburger").show();
+  } else {
+    //700pxより大きい時の処理
+    $(".hamburger").hide();
+  }
+});
+
 // スクロール
 // var fvh = $('.fv').height();
 
