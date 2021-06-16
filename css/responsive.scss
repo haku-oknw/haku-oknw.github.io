@@ -1,11 +1,13 @@
 @media (max-width: 700px) {
+  /* header ----- */
   .header {
     position: relative;
     &-content {
       width: 100%;
-      height: 50px;
+      height: $sp-header-h;
       background-color: aqua;
       padding: 0 15px;
+      position: fixed;
     }
 
     &-logo {
@@ -42,10 +44,8 @@
   /* ----- header */
 
   .hamburger {
-    visibility: visible;
     display: block;
     position: fixed;
-    z-index: 100;
     right: 18px;
     top: 4px;
     width: 42px;
@@ -53,7 +53,9 @@
     cursor: pointer;
     text-align: center;
     
+    z-index: $header-ham;
     span {
+      position: fixed;
       display: block;
       position: absolute;
       width: 30px;
@@ -132,7 +134,8 @@
   nav.globalMenuSp.active {
     transform: translateX(0%);
   }
-  
+
+  /* fv ----- */
   .fv {
     display: none;
   }
