@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* 変数定義と共通部分 */
+/* 変数定義 */
 /* Width */
 /* Height */
 /* z-index */
@@ -107,7 +107,6 @@
 /* ----- fv */
 /* message ----- */
 .message {
-  max-width: 960px;
   margin-top: 60px;
 }
 
@@ -154,10 +153,6 @@
 
 /* ----- message */
 /* point ----- */
-.point {
-  max-width: 960px;
-}
-
 .point-content {
   display: flex;
   flex-wrap: nowrap;
@@ -291,17 +286,194 @@
   padding-bottom: 60px;
 }
 
+/* ----- menu */
+/* hairCatalog ----- */
+.hairCatalog-contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hairCatalog-imgWrap {
+  width: 100%;
+  max-width: 256px;
+}
+
+.hairCatalog-imgWrap:nth-child(2) {
+  padding-top: 40px;
+}
+
+.hairCatalog-imgWrap:nth-child(3) {
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.hairCatalog-imgWrap:nth-child(5) {
+  padding-top: 40px;
+}
+
+.hairCatalog-imgWrap:nth-child(6) {
+  padding-top: 80px;
+}
+
+.hairCatalog-imgText {
+  background-color: #dcebd3;
+  font-size: 1.4rem;
+  padding: 24px 0px 24px 20px;
+  border-radius: 0 0 20px 20px;
+}
+
+/* ----- hairCatalog */
+/* infomation ----- */
+.infomation-image img {
+  width: 100%;
+}
+
+.infomation .menu__priceList {
+  margin: 60px auto;
+  width: 711px;
+}
+
+.infomation-map {
+  text-align: center;
+}
+
+/* ----- infomation */
+/* reservation ----- */
+.reservation-content {
+  padding: 60px 0;
+}
+
+.reservation-content p {
+  font-size: 1.6rem;
+  line-height: calc(32 / 16);
+}
+
+.reservation-wrap {
+  max-width: 957px;
+  height: 118px;
+  margin: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reservation-button {
+  width: 256px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----- reservation */
+/* questions ----- */
+.accordion-space {
+  font-size: 2.5rem;
+  padding-right: 30px;
+}
+
+.accordion-container .accordion-title {
+  padding: 24px 0 24px 40px;
+  position: relative;
+  margin: 0;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #584f4f;
+  cursor: pointer;
+}
+
+.accordion-wrap {
+  margin-bottom: 16px;
+}
+
+.accordion-title {
+  display: flex;
+  align-items: center;
+}
+
+.accordion-title, .accordion-content {
+  font-size: 1.6rem;
+}
+
+.accordion-container .accordion-title:hover,
+.accordion-container .accordion-title:active,
+.accordion-title.open {
+  background-color: #8bc889;
+  opacity: .9;
+}
+
+.accordion-container .accordion-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  width: 15px;
+  height: 2px;
+  /*縦線に*/
+  transform: rotate(90deg);
+  background: #fff;
+  transition: all .3s ease-in-out;
+}
+
+.accordion-container .accordion-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  /*横線*/
+  width: 15px;
+  height: 2px;
+  background: #fff;
+  transition: all .2s ease-in-out;
+}
+
+.accordion-container .accordion-title.open::before {
+  transform: rotate(180deg);
+}
+
+.accordion-container .accordion-title.open::after {
+  opacity: 0;
+}
+
+.accordion-content {
+  display: none;
+  padding-left: 2.3125em;
+  border: 1px solid #0079c1;
+}
+
+/* CSS for CodePen */
+.accordion-container {
+  width: 300px;
+  width: 720px;
+  margin: 0 auto;
+}
+
+.clear {
+  clear: left;
+}
+
+/* ----- questions */
+/* contact ----- */
+.contact-texts {
+  background-color: #dcebd3;
+  font-size: 1.6rem;
+  padding-left: 24px;
+  max-width: 720px;
+}
+
+/* ----- contact */
+/* footer ----- */
+footer {
+  background-color: #635B4F;
+  height: 150px;
+  width: 100%;
+  margin: 0 0 0 auto;
+  text-align: center;
+  line-height: 150px;
+}
+
+/* ----- footer */
 .sp-none {
   display: none;
 }
-
-/* menu ----- */
-/* ----- menu */
-/* menu ----- */
-/* ----- menu */
-/* menu ----- */
-/* ----- menu */
-/* menu ----- */
-/* ----- menu */
-/* menu ----- */
 /*# sourceMappingURL=style.css.map */
