@@ -1,47 +1,11 @@
 @charset "UTF-8";
-/* 変数定義と共通部分 */
+/* 変数定義 */
 /* Width */
 /* Height */
 /* z-index */
 /* Color */
 /* header_Color */
 /* background-color */
-/* .inner {
-  background-color: red;
-}
-
-.fv-text {
-  background-color: royalblue;
-}
-
-.message {
-  background-color: blueviolet;
-}
-
-.point {
-  background-color: brown;
-}
-
-.stylist {
-  background-color: chocolate;
-}
-
-.menu {
-  background-color: palevioletred;
-}
-
-.menu-priceLists {
-  background-color: aqua;
-}
-
-.menu-priceList {
-  background-color: cadetblue;
-}
-
-.menu-priceWrap {
-  background-color: coral;
-} */
-
 /* 共通部分 */
 .inner {
   max-width: calc(100% - 200px);
@@ -58,6 +22,11 @@
 /* .txt-border {
 
 } */
+.sectionWidth960 {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 section:not(:first-child) {
   margin-bottom: 150px;
 }

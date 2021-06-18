@@ -11,6 +11,12 @@
 //   &-priceList {background-color:cadetblue;}
 //   &-priceWrap {background-color:coral;}
 // }
+// .hairCatalog {background-color: blueviolet;}
+// .infomation {background-color: palevioletred;}
+// .reservation {
+//   background-color: aqua;
+//   &-wrap {background-color: chartreuse;}}
+// .questions {background-color: blueviolet;}
 
 /* 共通部分 */
 .inner {
@@ -26,7 +32,10 @@
 /* .txt-border {
 
 } */
-
+.sectionWidth960 {
+  max-width: $sectionWidth;
+  margin: 0 auto;
+}
 section:not(:first-child) {
   margin-bottom: 150px;
 }
