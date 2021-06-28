@@ -109,3 +109,15 @@ jQuery(function ($) {
    });
    */
 });
+
+// スライダー
+$(document).ready(function(){
+  $('.instgram_slider').slick({
+    autoplay: true,
+    autoplaySpeed: 4000,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  });
+});
