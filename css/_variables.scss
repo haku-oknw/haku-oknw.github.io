@@ -1,7 +1,7 @@
 /* 変数定義 */
 
 /* Width */
-$headerWidth: 200px;
+$headerWidth: 260px;
 $sectionWidth: 960px;
 
 $innerWidth: 1100px;
@@ -14,8 +14,20 @@ $swiper-SPh: 599px;
 $srvLink-h: 320px;
 
 /* z-index */
+$layer: (
+  header: 900,
+  header-ham: 999,
+  under: -1,
+  zero: 0,
+  default: 1,
+  second: 2,
+  text: 3,
+  imgBox: 5,
+);
+// z-index: map-get($layer, under);
 $header-z: 900;
 $header-ham: 999;
+$background: -1;
 
 /* Color */
 $mainColor: #8bc889;
@@ -25,6 +37,7 @@ $subColor: #fcfaf5;
 $l-pink: #d3c8b3;
 $l-green: #dcebd3;
 $f3: #f3f3f3;
+$d3: #D3D3D3;
 /* header_Color */
 $header_BGC: #faf9f7;
 $header-contact_BGC: #f9f3d8;
