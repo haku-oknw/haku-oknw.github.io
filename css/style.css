@@ -5,6 +5,7 @@
 /* z-index */
 /* Color */
 /* header_Color */
+/* footer_Color */
 /* header ----- */
 .header {
   position: relative;
@@ -31,7 +32,7 @@
 }
 
 .header-list {
-  padding-left: 40px;
+  padding-left: 60px;
   padding-bottom: 28px;
 }
 
@@ -46,6 +47,8 @@
 .header .reservation_BGcolor, .header .contact_BGcolor {
   width: 260px;
   text-align: center;
+  font-weight: bold;
+  transition: 0.5s;
 }
 
 .header .reservation_BGcolor {
@@ -56,11 +59,29 @@
   bottom: 136px;
 }
 
+.header .reservation_BGcolor:hover {
+  background-color: #8bc889;
+}
+
+.header .reservation_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .reservation_box span {
+  padding-left: 5px;
+}
+
 .header .contact_BGcolor {
   background-color: #f9f3d8;
   padding: 30px 0;
   position: absolute;
   bottom: 40px;
+}
+
+.header .contact_BGcolor:hover {
+  background-color: #f0e5b7;
 }
 
 /* ----- header */
@@ -270,7 +291,7 @@
 }
 
 .list-content:not(:last-child) {
-  border-bottom: 1px solid #D3D3D3;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .list-feature {
@@ -308,7 +329,7 @@
 
 .instgram_slider {
   padding: 0;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   margin: 0 0;
   max-width: calc(210px * 3);
@@ -353,7 +374,7 @@
   font-size: 2rem;
   font-weight: bold;
   padding-bottom: 20px;
-  border-bottom: 2px solid #584f4f;
+  border-bottom: 1px solid #584f4f;
 }
 
 .menu-priceWrap {
@@ -421,23 +442,24 @@
   text-align: center;
 }
 
-.infomation-lists {
+.lists-margin {
   margin: 60px 0 60px 120px;
 }
 
-.infomation-lists .list-content {
+.lists-margin .list-content {
   max-width: 690px;
 }
 
-.infomation-lists .list-feature {
+.lists-margin .list-feature {
   width: 240px;
 }
 
 /* ----- infomation */
 /* reservation ----- */
-#reservation {
+.reservation {
   background-color: #dcebd3;
   background-size: cover;
+  margin-bottom: 150px;
 }
 
 .reservation-content {
@@ -460,26 +482,65 @@
 .reservation-button {
   width: 256px;
   background-color: #fff;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ----- reservation */
-/* questions ----- */
-.accordion-space {
-  font-size: 2.5rem;
-  padding-right: 30px;
+.reservation button {
+  border: none;
+  padding: 0;
 }
 
-.accordion-container .accordion-title {
-  padding: 24px 0 24px 40px;
-  position: relative;
-  margin: 0;
+.reservation .lists-wrap:after {
   background-color: #fff;
-  border-radius: 20px;
+}
+
+.reservation .list-content:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+
+.btn-tel {
+  display: flex;
+}
+
+.btn-tel > p {
+  width: 43px;
+}
+
+.btn-tel > div {
+  text-align: center;
+  margin-left: 19px;
   color: #584f4f;
-  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+.btn-tel > div a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #584f4f;
+}
+
+.btn-line a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #584f4f;
+  display: flex;
+  align-items: center;
+}
+
+.btn-line img {
+  padding-right: 16px;
+}
+
+/* ----- reservation */
+/* questions ----- */
+.accordion-container {
+  width: 300px;
+  width: 720px;
+  margin: 0 auto;
+  font-size: 1.6rem;
 }
 
 .accordion-wrap {
@@ -489,63 +550,76 @@
 .accordion-title {
   display: flex;
   align-items: center;
+  padding: 24px 0 24px 40px;
+  position: relative;
+  margin: 0;
+  background-color: #fff;
+  border-radius: 20px;
+  color: #584f4f;
+  cursor: pointer;
 }
 
-.accordion-title, .accordion-content {
-  font-size: 1.6rem;
-}
-
-.accordion-container .accordion-title:hover,
-.accordion-container .accordion-title:active,
-.accordion-title.open {
-  background-color: #8bc889;
-  opacity: .9;
-}
-
-.accordion-container .accordion-title::before {
+.accordion-title::before {
   content: "";
   position: absolute;
   top: 50%;
-  right: 25px;
-  width: 15px;
+  right: 35px;
+  width: 24px;
   height: 2px;
-  /*縦線に*/
   transform: rotate(90deg);
-  background: #fff;
+  background: #707070;
   transition: all .3s ease-in-out;
 }
 
-.accordion-container .accordion-title::after {
+.accordion-title::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 25px;
-  /*横線*/
-  width: 15px;
+  right: 35px;
+  width: 24px;
   height: 2px;
-  background: #fff;
+  background: #707070;
   transition: all .2s ease-in-out;
 }
 
-.accordion-container .accordion-title.open::before {
+.accordion-mark {
+  font-size: 2.5rem;
+  padding-right: 30px;
+}
+
+.accordion-title:hover, .accordion-title:active {
+  background-color: #dcebd3;
+}
+
+.accordion-title.open {
+  background-color: #fff;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.accordion-title.open::before {
   transform: rotate(180deg);
 }
 
-.accordion-container .accordion-title.open::after {
+.accordion-title.open::after {
   opacity: 0;
 }
 
 .accordion-content {
   display: none;
-  padding-left: 2.3125em;
-  border: 1px solid #0079c1;
+  padding: 0 0 24px 40px;
+  background-color: #fff;
+  border-radius: 0px 0px 20px 20px;
 }
 
-/* CSS for CodePen */
-.accordion-container {
-  width: 300px;
-  width: 720px;
-  margin: 0 auto;
+.accordion-content dd {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.accordion-content p {
+  max-width: 530px;
+  padding-top: 5px;
+  line-height: calc(32 / 16);
 }
 
 /* ----- questions */
@@ -553,18 +627,170 @@
 .contact-texts {
   background-color: #dcebd3;
   font-size: 1.6rem;
-  padding-left: 24px;
+  padding: 17px 24px;
   max-width: 720px;
+  margin: 0 0 42px 120px;
+  border-radius: 5px;
+}
+
+.contact-texts a {
+  color: #584f4f;
+  text-decoration: #584f4f underline;
+}
+
+.contact form {
+  max-width: 720px;
+  margin-left: 120px;
+  font-size: 1.6rem;
+}
+
+.contact__wrap:not(:nth-child(6)) {
+  padding-bottom: 24px;
+}
+
+.contact__wrap > label {
+  max-width: calc(720px - 430px);
+  width: 100%;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+
+.contact__wrap > input, .contact__wrap textarea {
+  box-sizing: border-box;
+  max-width: 423px;
+  width: 100%;
+}
+
+.contact__wrap > input {
+  height: 40px;
+}
+
+.contact__wrap textarea {
+  height: 174px;
+  margin-bottom: 32px;
+}
+
+.contact label[for="text"] {
+  vertical-align: top;
+}
+
+.contact label::after {
+  content: "";
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #584f4f;
+  padding: 4px 12px;
+  border-radius: 5px;
+  position: absolute;
+  right: 36px;
+}
+
+.contact .required::after {
+  content: "必須";
+  background-color: #F9C4C4;
+}
+
+.contact .optional::after {
+  content: "任意";
+  border: 1px solid #584f4f;
+}
+
+.contact__button {
+  padding: 20px 104px;
+  background-color: #E3E3E3;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.contact__button:hover {
+  background-color: #8bc889;
+}
+
+.precautions {
+  width: 100%;
+  height: 200px;
+  height: 400px;
+  font-size: 1.6rem;
+  overflow-y: scroll;
+  background-color: #fff;
+  padding: 16px 17px;
+}
+
+.precautions-title {
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding-bottom: 24px;
+}
+
+.agree_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 54px 0;
+}
+
+.agree_btn input {
+  width: 25px;
+  height: 25px;
+}
+
+.agree_btn label {
+  padding-left: 40px;
 }
 
 /* ----- contact */
 /* footer ----- */
-footer {
-  height: 150px;
+.footer {
+  height: 567px;
   text-align: center;
-  line-height: 150px;
   max-width: calc(100% - (260px));
   margin: 0 0 0 auto;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer-logo {
+  padding: 56px 0 16px;
+}
+
+.footer_box {
+  font-size: 1.6rem;
+  padding: 20px 0 24px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  max-width: 320px;
+  text-align: center;
+  text-align: left;
+  margin: 40px auto 48px;
+}
+
+.footer_list {
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.footer_tel_icon {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.footer_tel_icon a {
+  padding-left: 5px;
+}
+
+.footer small {
+  font-size: 1.2rem;
 }
 
 /* ----- footer */

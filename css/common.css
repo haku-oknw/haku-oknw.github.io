@@ -5,6 +5,7 @@
 /* z-index */
 /* Color */
 /* header_Color */
+/* footer_Color */
 /* background-color */
 /* 共通部分 */
 main {
@@ -16,7 +17,7 @@ main {
 
 .footer {
   color: #fff;
-  background-color: #635B4F;
+  background-color: #635b4f;
 }
 
 .margin-left {
@@ -29,11 +30,11 @@ main {
 }
 
 .inner > section {
-  margin-bottom: 150px;
+  padding-bottom: 150px;
 }
 
-.reservation, .questions, .contact {
-  margin-bottom: 150px;
+.inner > section:last-child {
+  padding-bottom: 220px;
 }
 
 .section-title, .contact__title {
