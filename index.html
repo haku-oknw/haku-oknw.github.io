@@ -38,14 +38,18 @@
           <li class="header-list"><a href="#infomation" class="header-listLink">店舗案内</a></li>
           <li class="header-list"><a href="#questions" class="header-listLink">よくあるご質問</a></li>
           
-          <li class="reservation_BGcolor">
-            <a href="#reservation" class="header-listLink">ご予約はこちら<br>
-              <span class="sp-none">012-345-6789</span>
+          <li>
+            <a  class="reservation_BGcolor" href="#reservation" class="header-listLink">ご予約はこちら
+              <div class="reservation_box">
+                <img src="image/top_icon_tel-2.png" alt="電話のアイコン">
+                <span class="sp-none">012-345-6789</span>
+                <!-- <a href="tel:012-345-6789" class="sp-none">012-345-6789</a> -->
+              </div>
             </a>
           </li>
           
-          <li class="contact_BGcolor">
-            <a href="#contact" class="header-listLink">お問い合わせ</a>
+          <li>
+            <a class="contact_BGcolor" href="#contact" class="header-listLink">お問い合わせ</a>
           </li>
           
           <!-- <div class="header-navBox_bottom"></div> 不要かも SP版で要検証 -->
@@ -312,7 +316,7 @@
         <img src="image/information_mainimage.png" alt="店舗の内装">
       </div>
 
-      <dl class="lists-wrap infomation-lists">
+      <dl class="lists-wrap lists-margin">
         <div class="list-content">
           <dt class="list-feature">店舗名</dt>
           <dd class="list-detail">シナジーサロン</dd>
@@ -351,34 +355,48 @@
   </div> <!-- inner -->
 
   <section id="reservation" class="reservation">
-    <!-- <div class="inner"> -->
-      <div class="reservation-content inner">
-        <p class="section-subTitle">Reservation</p>
-        <h1 class="section-title">ご予約</h1>
+    <div class="reservation-content inner">
+      <p class="section-subTitle">Reservation</p>
+      <h1 class="section-title">ご予約</h1>
 
-        <p>ご予約方法は、３つございます。<br>※当日のご予約や変更は、お電話にてお願いいたします。</p>
+      <p>ご予約方法は、３つございます。<br>※当日のご予約や変更は、お電話にてお願いいたします。</p>
 
-        <div class="reservation-wrap">
-          <div class="reservation-button"><!-- tel -->
-            <img src="image/reservation_buttons_hpb_img.png" alt="電話アイコン">
+      <div class="reservation-wrap">
+        <button class="reservation-button btn-tel"><!-- tel -->
+          <p><img src="image/top_icon_tel-1.png" alt="電話アイコン"></p>
+          <div>
+            <a href="tel:012-345-6789">012-345-6789
+            <p>（9:30～18:30）</p></a>
           </div>
+        </button>
 
-          <div class="reservation-button"><!-- HotPepper -->
-            <a href="">
-              <img src="image/reservation_buttons_hpb_img.png" alt="HotPepperへ移動">
-            </a>
-          </div>
+        <button class="reservation-button"><!-- HotPepper -->
+          <a href=""><img src="image/reservation_buttons_hpb_img.png" alt="HotPepperへ移動"></a>
+        </button>
 
-          <div class="reservation-button"><!-- LINE -->
-            <img src="image/reservation_buttons_line_icon.png" alt="LINEへ移動">
-          </div>
+        <button class="reservation-button btn-line"><!-- LINE -->
+          <a href=""><img src="image/reservation_buttons_line_icon.png" alt="LINEへ移動">友達追加する</a>
+        </button>
 
-        </div> <!-- reservation-wrap -->
-        
-        <p>住所・アクセス</p>
-  <!-- 未記入！！！！ -->
-      </div> <!-- reservation-content -->
-    </section> <!-- reservation -->
+      </div> <!-- reservation-wrap -->
+      
+      <dl class="lists-wrap lists-margin">
+        <div class="list-content">
+          <dt class="list-feature">住所・アクセス</dt>
+          <dd class="list-detail">〒000-000 三重県アラブ市○○1-1-1<br>○○駅より車で5分</dd>
+        </div>
+        <div class="list-content">
+          <dt class="list-feature">営業時間</dt>
+          <dd class="list-detail">9:30～18:30（最終受付18:30）</dd>
+        </div>
+        <div class="list-content">
+          <dt class="list-feature">定休日</dt>
+          <dd class="list-detail">月曜日（不定休あり）</dd>
+        </div>
+      </dl>
+
+    </div> <!-- reservation-content -->
+  </section> <!-- reservation -->
 
   <div class="inner">
 
@@ -388,62 +406,174 @@
 
       <dl id="accordion" class="accordion-container">
         <div class="accordion-wrap">
-          <dt class="accordion-title js-accordion-title"><span class="accordion-space">Q.</span>新型コロナウイルス感染症対策は何を実施していますか？</dt>
+          <dt class="accordion-title js-accordion-title"><span class="accordion-mark">Q.</span>新型コロナウイルス感染症対策は何を実施していますか？</dt>
   
           <div class="accordion-content">
-            <dd>Accordion Content1</dd>
+            
+            <dd>
+              <span class="accordion-mark">A.</span>
+              <p>
+                自治体の発行するガイドラインに従い、以下の対策を実施しております。<br>
+                ・スタッフのマスク着用での施術<br>
+                ・スタッフの毎日の検温管理<br>
+                ・テーブル、美容機器、タブレット等の消毒の徹底<br>
+                ・店内のこまめな換気の徹底<br><br>
+  
+                また、以下の条件に当てはまるお客様は、来店をご遠慮いただいております。<br>
+                ・過去2週間以内に37.5℃以上の発熱があった方<br>
+                ・嗅覚および味覚障害、その他風邪の諸症状など体調不良がある方<br>
+                ・ご自身が14日以内に海外への渡航歴がある方<br>
+                ・14日以内に海外への渡航歴がある方との接触があった方<br><br>
+  
+                お客様には大変ご迷惑をお掛け致しますが、お客様とスタッフの安全を第一に考え判断をさせていただきますこと、何卒ご理解賜りますよう、よろしくお願いいたします。
+              </p>
+            </dd>
           </div>
         </div> <!-- accordion-wrap -->
         
         <div class="accordion-wrap">
-          <dt class="accordion-title js-accordion-title"><span class="accordion-space">Q.</span>決済方法は、具体的に何がありますか？</dt>
+          <dt class="accordion-title js-accordion-title"><span class="accordion-mark">Q.</span>決済方法は、具体的に何がありますか？</dt>
             
           <div class="accordion-content">
-            <dd>Accordion Content2</dd>
+            <dd>
+              <span class="accordion-mark">A.</span>
+              <p>
+                下記の決済方法がご利用できます。<br>
+                ・現金<br>
+                ・カード<br>
+                （VISA、MasterCard、JCB、American Express、Diners、Discover、Rakuten Card）<br>
+                ・電子マネー<br>
+                （R Pay、Edy、nanaco、WAON、交通系IC、QUIC Pay、iD）
+              </p>
+            </dd>
           </div>
         </div> <!-- accordion-wrap -->
             
         <div>
-          <dt class="accordion-title js-accordion-title"><span class="accordion-space">Q.</span>駐車場はありますか？</dt>
+          <dt class="accordion-title js-accordion-title"><span class="accordion-mark">Q.</span>駐車場はありますか？</dt>
 
           <div class="accordion-content">
-            <dd>Accordion Content3</dd>
+            <dd>
+              <span class="accordion-mark">A.</span>
+              <p>1台分ございます。</p>
+            </dd>
           </div>
         </div> <!-- accordion-wrap -->
       </dl>
     </section> <!-- questions -->
 
-
-    
     <section id="contact" class="contact">
       <p class="section-subTitle">Contact</p>
       <h1 class="section-title">お問い合わせ</h1>
 
       <div class="contact-texts">
-        <p>※お問い合わせフォームからご予約はできません。<br><br>
-        >> ご予約はこちら</p>
+        <p>※お問い合わせフォームからご予約はできません。<br>
+        <a href="">>> ご予約はこちら</a></p>
       </div>
-      <form action="confirm.php" method="post" class="inner">
+
+      <form action="confirm.php" method="post">
         
         <div class="contact__wrap">
-          <label for="name">担当者名</label>
-          <input id="name" type="text" name="yourName">
+          <label for="name" class="required">お名前</label>
+          <input id="name" type="text" name="name">
         </div>
 
         <div class="contact__wrap">
-          <label for="telNumber">電話番号</label>
-          <input id="telNumber" type="tel" name="yourTelNumber">
-        </div>
-        
-        <div class="contact__wrap">
-          <label for="mail">メールアドレス</label>
-          <input id="mail" type="email" name="yourEmail">
+          <label for="furigana" class="required">ふりがな</label>
+          <input id="furigana" type="text" name="furigana">
         </div>
 
         <div class="contact__wrap">
-          <label for="text">お問い合わせ内容</label>
-          <br>
+          <label for="telNumber" class="optional">電話番号</label>
+          <input id="telNumber" type="tel" name="telNumber">
+        </div>
+        
+        <div class="contact__wrap">
+          <label for="mail" class="required">メールアドレス</label>
+          <input id="mail" type="email" name="mail">
+        </div>
+
+        <div class="contact__wrap">
+          <label for="subMail" class="required">メールアドレス（確認用）</label>
+          <input id="subMail" type="email" name="subMail">
+        </div>
+
+        <div class="contact__wrap">
+          <label for="text" class="required">お問い合わせ内容</label>
           <textarea id="text"></textarea>
+        </div>
+
+        <div class="precautions__wrap">
+          <h2 class="precautions-title">個人情報保護方針</h2>
+          <div class="precautions">
+            <p>
+              シナジーサロン（以下「当サロン」）は、当サロンが取得した個人情報の取扱いに関し、個人情報の保護に関する法律、個人情報保護に関するガイドライン等の指針、その他個人情報保護に関する関係法令を遵守します。
+            </p><br>
+            
+            <ul>
+              <li>
+                1.   取得する情報およびその取得方法
+                <p>当サロンが取得するユーザー情報は、取得方法に応じて以下のとおりとなります。</p><br>
+                <dl>
+                  <dt>(1) ユーザーから直接取得する情報と取得方法</dt>
+                  <dd>
+                    当サロンは、当サロンが提供するインターネットサイト（以下「本サイト」）およびサービスの運営に必要な範囲で、本サイトの利用者（以下「ユーザー」）から、個人情報を取得することがあります。
+                  </dd><br>
+
+                  <dt>(2) 情報の利用目的</dt>
+                  <dd>
+                    当サロンは、取得した個人情報を以下に定める目的のために使用します。<br><br>
+                    <p>サービスの提供</p>
+                    <p>利用料金の請求</p>
+                    <p>ユーザーの本人確認</p>
+                    <p>お問い合わせ回答</p>
+                  </dd><br>
+                </dl>
+              </li>
+
+              <li>
+                2.   個人情報の管理
+                <p>当サロンは、ユーザーから取得した個人情報の管理について、以下を徹底します。</p><br>
+                <dl>
+                  <dt>(1) 情報の正確性の確保</dt>
+                  <dd>取得した個人情報については、常に正確かつ最新の情報となるよう努めます。</dd><br>
+                  <dt>(2) 安全管理措置</dt>
+                  <dd>当サロンは、組織的な個人情報の管理については、社内規定による厳重な取扱方法を規定し、規定に基づいた取扱いと厳格な運用を徹底しています。</dd><br>
+                  <dt>(3) 個人情報管理の委託先の監督</dt>
+                  <dd>個人情報の管理を外部委託する場合には、当サロンの規程に基づく委託先にのみ委託し適切に管理します。</dd><br>
+                  <dt>(4) 個人情報の保存期間と廃棄</dt>
+                  <dd>取得した個人情報は、保存期間を設定し、保存期間終了後は廃棄します。</dd><br>
+                </dl>
+              </li>
+
+              <li>
+                3.   個人情報の第三者への提供
+                <p>当サロンは、取得した個人情報を、第三者に提供することはありません。また、今後、第三者提供を行う場合は、提供する情報と目的を提示し、ユーザーの同意を得た場合のみ行います。</p><br>
+              </li>
+
+              <li>
+                4.   個人情報の開示・訂正・利用停止
+                <p>個人情報について、開示、訂正、利用停止等のお申し出があった場合には、本人の申し出であることを確認の上、当サロン所定の方法に基づき対応致します。具体的な方法は、個別にご案内しますので、フォームにてお問い合わせください。</p><br>
+              </li>
+
+              <li>
+                5.   お問い合わせ先
+                <p>本サービス、個人情報の取扱いについては、フォームにてご連絡ください。</p><br>
+              </li>
+
+              <li>
+                6.   制定日、改定日
+                <p>制定日●年●月●日</p>
+                <p>改定日●年●月●日</p>
+              </li>
+            </ul>
+
+          </div><!-- precautions -->
+
+          <div class="agree_btn">
+            <input type="checkbox" id="agree" name="agree" value="agree">
+            <label for="agree">個人情報保護方針に同意します。</label>
+          </div>
         </div>
 
         <button type="submit" class="contact__button">送信</button>
@@ -451,13 +581,25 @@
       </form>
     </section> <!-- contact -->
     
-  <!-- </div> -->   <!-- inner -->
   </div> <!-- inner -->
 
   <!-- <div id="page_top"><a href="#"></a></div> -->
 </main>
 
 <footer class="footer">
+  <h2 class="footer-logo"><img src="image/footer_logo.png" alt="シナジーサロンのロゴ画像"></h2>
+  <p><a href="" class="footer-insta_icon"><img src="image/footer_instagram.png" alt="インスタグラムのアイコン"></a></p>
+
+  <div class="footer_box">
+    <p class="footer_list">〒000-000 三重県アラブ市○○1-1-1</p>
+    <p class="footer_list">営業時間　9:30～18:30（最終受付18:30）</p>
+    <p class="footer_list">月曜定休日（不定休あり）</p>
+    <p class="footer_tel_icon">
+      <img src="image/top_icon_tel.png" alt="電話のアイコン">
+      <a href="tel:012-345-6789">012-345-6789</a>
+    </p>
+  </div>
+
   <small>&copy;Synergy Salon All Rights Reserved.</small>
 </footer>
 

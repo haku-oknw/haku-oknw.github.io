@@ -27,7 +27,7 @@ main {
   background-color: $subColor;
 }
 .footer {color: #fff;
-  background-color: $footer_BGC; }
+  background-color: $footer_BGC;}
 .margin-left {
   margin-left: 83px;
 }
@@ -38,11 +38,10 @@ main {
   margin: 0 auto;
 }
 .inner > section {
-  margin-bottom: 150px;
-}
-
-.reservation, .questions, .contact  {
-  margin-bottom: 150px;
+  padding-bottom: 150px;
+  &:last-child {
+    padding-bottom: 220px;
+  }
 }
 
 .section-title, .contact__title {

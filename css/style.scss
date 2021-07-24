@@ -24,8 +24,7 @@
   }
   
   &-list {
-    padding-left: 40px;
-    // padding-left: 60px;
+    padding-left: 60px;
     padding-bottom: 28px;
   }
   
@@ -40,6 +39,8 @@
   .reservation_BGcolor, .contact_BGcolor {
     width: $headerWidth;
     text-align: center;
+    font-weight: bold;
+    transition: 0.5s;
   }
   
   .reservation_BGcolor {
@@ -48,6 +49,18 @@
     padding: 19px 0 18px;
     position: absolute;
     bottom: 136px;
+    &:hover {
+      background-color: $mainColor;
+    }
+  }
+
+  .reservation_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      padding-left: 5px;
+    }
   }
   
   .contact_BGcolor {
@@ -55,6 +68,9 @@
     padding: 30px 0;
     position: absolute;
     bottom: 40px;
+    &:hover {
+      background-color: $header-contact_btn_hover;
+    }
   }
 }
 /* ----- header */
@@ -301,7 +317,7 @@
   }
   &_slider {
     padding: 0;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     margin: 0 0;
     max-width: calc(210px * 3);
@@ -342,7 +358,7 @@
     font-size: 2rem;
     font-weight: bold;
     padding-bottom: 20px;
-    border-bottom: 2px solid $textColor;
+    border-bottom: 1px solid $textColor;
   }
 
   &-priceWrap {
@@ -407,32 +423,25 @@
   &-map {
     text-align: center;
   }
-  &-lists {
-    margin: 60px 0 60px 120px;
-    .list-content { 
-      max-width: 690px;
-    }
-    .list-feature {
-      width: 240px;
-    }
-  }
 }
 
+.lists-margin {
+  margin: 60px 0 60px 120px;
+  .list-content { 
+    max-width: 690px;
+  }
+  .list-feature {
+    width: 240px;
+  }
+}
 /* ----- infomation */
 
 /* reservation ----- */
-#reservation {
+.reservation {
   background-color: $l-green;
   background-size: cover;
-  // width: calc(100vw - 283px);
-  // max-width: calc(100vw - 260px);
-  // margin: 0;
-  // position: relative;
-  // left: calc(260px * 1.845);
-  // transform: translateX(-50%);
-}
-.reservation {
-  
+  margin-bottom: 150px;
+
   &-content {
     padding: 60px 0;
 
@@ -451,96 +460,146 @@
   &-button {
     width: 256px;
     background-color: #fff;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  button {
+    border: none;
+    padding: 0;
+  }
+
+  .lists-wrap:after {
+    background-color: #fff;
+  }
+
+  .list-content:not(:last-child) {
+    border-bottom: 1px solid #fff;
+  }
+}
+
+.btn-tel {
+  display: flex;
+  & > p {
+    width: 43px;
+  }
+  & > div {
+    text-align: center;
+    margin-left: 19px;
+    color: $textColor;
+    font-size: 1.6rem;
+    a {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $textColor;
+    }
+  }
+}
+
+.btn-line {
+  a {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $textColor;
+    
+    display: flex;
+    align-items: center;
+  }
+  img {
+    padding-right: 16px;
   }
 }
 /* ----- reservation */
 
 /* questions ----- */
-// .questions {
-// }
-
 // accordion
-.accordion-space {
-  font-size: 2.5rem;
-  padding-right: 30px;
+.accordion {
+  &-container {
+    width: 300px;
+    width: 720px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+  }
+  &-wrap {
+    margin-bottom: 16px;
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+    
+    padding: 24px 0 24px 40px;
+    position: relative;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 20px;
+    color: $textColor;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 35px;
+      width: 24px;
+      height: 2px;
+      transform: rotate(90deg);
+      background: $open-color;
+      transition: all .3s ease-in-out;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 35px;
+      width: 24px;
+      height: 2px;
+      background: $open-color;
+      transition: all .2s ease-in-out;
+    }
+  }
+  &-mark {
+    font-size: 2.5rem;
+    padding-right: 30px;
+  }
 }
-.accordion-container .accordion-title {
-  padding: 24px 0 24px 40px;
-  position: relative;
-  margin: 0;
-  background-color: #fff;
-  border-radius: 20px;
-  // font-size: 1.25em;
-  color: $textColor;
-  cursor: pointer;
-}
-.accordion-wrap {
-  margin-bottom: 16px;
-}
+
+// .accordion-container
 .accordion-title {
-  display: flex;
-  align-items: center;
+  &:hover, &:active { 
+    background-color: $l-green;
+  }
 }
-.accordion-title, .accordion-content {
-  font-size: 1.6rem;
-}
-
-.accordion-container .accordion-title:hover,
-.accordion-container .accordion-title:active,
 .accordion-title.open { 
-  background-color: $mainColor;
-  opacity: .9;
+  background-color: #fff;
+  border-radius: 20px 20px 0px 0px;
 }
 
-.accordion-container .accordion-title::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 25px;
-  width: 15px;
-  height: 2px;
-  /*縦線に*/
-  transform: rotate(90deg);
-  background: #fff;
-  transition: all .3s ease-in-out;
+.accordion-title.open {
+  &::before {
+    transform: rotate(180deg);
+  }
+  &::after {
+    opacity: 0;
+  }
 }
-
-.accordion-container .accordion-title::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 25px;
-  /*横線*/
-  width: 15px;
-  height: 2px;
-  background: #fff;
-  transition: all .2s ease-in-out;
-}
-
-.accordion-container .accordion-title.open::before {
-  transform: rotate(180deg);
-}
-
-.accordion-container .accordion-title.open::after {
-  opacity: 0;
-}
-
 .accordion-content {
   display: none;
-  padding-left: 2.3125em;
-  border: 1px solid #0079c1;
-}
+  padding: 0 0 24px 40px;
+  background-color: #fff;
+  border-radius: 0px 0px 20px 20px;
 
-/* CSS for CodePen */
-.accordion-container {
-  width: 300px;
-  width: 720px;
-  margin: 0 auto;
+  dd {
+    display: flex;
+    flex-wrap:nowrap;
+  }
+  p {
+    max-width: 530px;
+    padding-top: 5px;
+    line-height: calc(32 / 16);
+  }
 }
-
 //accordion
 /* ----- questions */
 
@@ -549,21 +608,161 @@
   &-texts {
     background-color: $l-green;
     font-size: 1.6rem;
-    padding-left: 24px;
+    padding: 17px 24px;
     max-width: 720px;
+    margin: 0 0 42px 120px;
+    border-radius: 5px;
+
+    a {
+      color: $textColor;
+      text-decoration: $textColor underline;
+    }
   }
-  // background-color: blue;
-  // max-width: $sectionWidth;
+
+  form {
+    max-width: 720px;
+    margin-left: 120px;
+    font-size: 1.6rem;
+  }
+
+  &__wrap {
+    &:not(:nth-child(6)) {
+      padding-bottom: 24px;
+    }
+
+    > label {
+      max-width: calc(720px - 430px);
+      width: 100%;
+      font-weight: bold;
+      display: inline-block;
+      position: relative;
+    }
+
+    > input, textarea {
+      box-sizing: border-box;
+      max-width: 423px;
+      width: 100%;
+    }
+
+    > input {
+      height: 40px;
+    }
+    textarea {
+      height: 174px;
+      margin-bottom: 32px;
+    }
+  }
+
+  label[for="text"] {
+    vertical-align: top;
+  }
+
+  label::after {
+    content: "";
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $textColor;
+    padding: 4px 12px;
+    border-radius: 5px;
+    position: absolute;
+    right: 36px;
+  }
+  .required::after {
+    content: "必須";
+    background-color: #F9C4C4;
+  }
+  .optional::after {
+    content: "任意";
+    border: 1px solid $textColor;
+  }
+
+  &__button {
+    padding: 20px 104px;
+    background-color: #E3E3E3;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    &:hover {
+      background-color: $mainColor;
+    }
+  }
 }
+// precautions
+.precautions  {
+  &-title {
+    font-weight: bold;
+    font-size: 1.6rem;
+    padding-bottom: 24px;
+  }
+  width: 100%;
+  height: 200px;
+  height: 400px;
+  font-size: 1.6rem;
+  overflow-y: scroll;
+  background-color: #fff;
+  padding: 16px 17px;
+}
+.agree_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 54px 0;
+  input {
+    width: 25px;
+    height: 25px;
+  }
+  label {
+    padding-left: 40px;
+  }
+}
+// precautions
 /* ----- contact */
 
 /* footer ----- */
-footer {
+.footer {
   // background-color: $footer_BGC;
-  height: 150px;
+  height: 567px;
   text-align: center;
-  line-height: 150px;
+  // line-height: 150px;
   max-width: calc(100% - (260px));
   margin: 0 0 0 auto;
+
+  a {
+    color: #fff;
+  }
+  &-logo {
+    padding: 56px 0 16px;
+  }
+  &_box {
+    font-size: 1.6rem;
+    padding: 20px 0 24px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    max-width: 320px;
+    text-align: center;
+    text-align: left;
+    margin: 40px auto 48px;
+  }
+  &_list {
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  &_tel_icon {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    a {
+      padding-left: 5px;
+    }
+  }
+  small {
+    font-size: 1.2rem;
+  }
 }
 /* ----- footer */
