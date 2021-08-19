@@ -1,4 +1,20 @@
+@import "variables";
+@media (max-width: 1275px) {
+  .instgram {
+    &_slider {
+      display: none;
+      // max-width: 597px;
+      &Img {
+        // max-width: 150px;
+      }
+    }
+  }
+}
+
 @media (max-width: 700px) {
+  main {display: none;}
+  .inner {display: none;}
+
   /* header ----- */
   .header {
     position: relative;
@@ -8,6 +24,7 @@
       background-color: aqua;
       padding: 0 15px;
       position: fixed;
+      top: 0;
     }
 
     &-logo {
@@ -136,7 +153,9 @@
   }
 
   /* fv ----- */
-  .fv {
+  .fv, .message, .point, .stylist, .instgram, .stickarrow,
+  .menu, .hairCatalog, .infomation, .reservation, .btn-tel, .btn-line,
+  .accordion, .contact , .precautions , .footer{
     display: none;
   }
   .sp-none {

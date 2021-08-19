@@ -119,5 +119,17 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+
+    // responsive: [{
+      // breakpoint: 1200,
+        //ブレイクポイントを指定
+      // settings: {
+        // centerPadding:'50px',
+      // },{
+      // breakpoint: 480,
+      // settings: {
+      //   centerMode: false,
+      // }
+    // }]
   });
 });
