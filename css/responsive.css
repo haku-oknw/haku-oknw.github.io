@@ -1,5 +1,25 @@
 @charset "UTF-8";
+/* 変数定義 */
+/* Width */
+/* Height */
+/* z-index */
+/* Color */
+/* header_Color */
+/* footer_Color */
+@media (max-width: 1275px) {
+  .instgram_slider {
+    display: none;
+  }
+}
+
 @media (max-width: 700px) {
+  main {
+    display: none;
+  }
+  .inner {
+    display: none;
+  }
+  /* header ----- */
   .header {
     position: relative;
   }
@@ -8,6 +28,8 @@
     height: 50px;
     background-color: aqua;
     padding: 0 15px;
+    position: fixed;
+    top: 0;
   }
   .header-logo {
     height: 100%;
@@ -39,18 +61,18 @@
   }
   /* ----- header */
   .hamburger {
-    visibility: visible;
     display: block;
     position: fixed;
-    z-index: 100;
     right: 18px;
     top: 4px;
     width: 42px;
     height: 42px;
     cursor: pointer;
     text-align: center;
+    z-index: 999;
   }
   .hamburger span {
+    position: fixed;
     display: block;
     position: absolute;
     width: 30px;
@@ -117,7 +139,10 @@
   nav.globalMenuSp.active {
     transform: translateX(0%);
   }
-  .fv {
+  /* fv ----- */
+  .fv, .message, .point, .stylist, .instgram, .stickarrow,
+  .menu, .hairCatalog, .infomation, .reservation, .btn-tel, .btn-line,
+  .accordion, .contact, .precautions, .footer {
     display: none;
   }
   .sp-none {

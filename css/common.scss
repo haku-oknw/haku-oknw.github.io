@@ -36,6 +36,7 @@ main {
 .inner {
   max-width: $sectionWidth;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .inner > section {
   padding-bottom: 150px;
@@ -186,9 +187,7 @@ main {
     border-radius: 5px;
     width: 100%;
     height: 14px;
-    // z-index: map-get($layer, under);
-     /* -1 */
-    z-index: 1;
+    z-index: map-get($layer, under);
   }
 }
 
