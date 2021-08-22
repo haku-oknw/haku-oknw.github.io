@@ -429,7 +429,7 @@
   }
   .lists-wrap {
     margin: 60px auto;
-    width: 727px;
+    max-width: 727px;
   }
   .list-content {
     max-width: 100%;
@@ -536,8 +536,8 @@
 // accordion
 .accordion {
   &-container {
-    width: 300px;
-    width: 720px;
+    // width: 300px;
+    max-width: 720px;
     margin: 0 auto;
     font-size: 1.6rem;
   }
