@@ -152,6 +152,9 @@
 
   .txt-border-bottom {
     z-index: map-get($layer, default);
+    &::after {
+      top: 19px;
+    }
   }
 
   &-subText {
@@ -352,14 +355,13 @@
     padding: 60px 120px 40px;
     display: flex;
     flex-wrap:wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   &-priceList {
     width: 50%;
+    width: 314px;
     
-    &:nth-child(odd) {
-      padding-right: 40px;}
     &:nth-child(1),
     &:nth-child(2) {
       padding-bottom: 60px;}
@@ -425,9 +427,12 @@
   &-image img{
     width: 100%;
   }
-  .menu__priceList {
+  .lists-wrap {
     margin: 60px auto;
-    width: 711px;
+    width: 727px;
+  }
+  .list-content {
+    max-width: 100%;
   }
   &-maps {
     text-align: center;
