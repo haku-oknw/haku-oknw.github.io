@@ -437,7 +437,7 @@
 
 .infomation .lists-wrap {
   margin: 60px auto;
-  width: 727px;
+  max-width: 727px;
 }
 
 .infomation .list-content {
@@ -549,8 +549,7 @@
 /* ----- reservation */
 /* questions ----- */
 .accordion-container {
-  width: 300px;
-  width: 720px;
+  max-width: 720px;
   margin: 0 auto;
   font-size: 1.6rem;
 }
