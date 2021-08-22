@@ -165,6 +165,10 @@
   z-index: 1;
 }
 
+.message .txt-border-bottom::after {
+  top: 19px;
+}
+
 .message-subText {
   margin-top: calc(327px - 405px);
   font-size: 1.6rem;
@@ -358,15 +362,12 @@
   padding: 60px 120px 40px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .menu-priceList {
   width: 50%;
-}
-
-.menu-priceList:nth-child(odd) {
-  padding-right: 40px;
+  width: 314px;
 }
 
 .menu-priceList:nth-child(1), .menu-priceList:nth-child(2) {
@@ -434,9 +435,13 @@
   width: 100%;
 }
 
-.infomation .menu__priceList {
+.infomation .lists-wrap {
   margin: 60px auto;
-  width: 711px;
+  width: 727px;
+}
+
+.infomation .list-content {
+  max-width: 100%;
 }
 
 .infomation-maps {
