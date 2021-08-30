@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* 変数定義 */
 /* Width */
+/* 290 */
 /* Height */
 /* z-index */
 /* Color */
@@ -13,139 +14,476 @@
 }
 
 @media (max-width: 700px) {
-  main {
+  main, footer {
+    max-width: 100%;
+  }
+  .instgram-wrap {
     display: none;
   }
-  .inner {
+  .pc-none {
+    display: block;
+  }
+  .sp-none {
     display: none;
+  }
+  .inner > section {
+    padding-bottom: 100px;
+  }
+  .section-title, .contact__title {
+    font-size: 2.2rem;
+    padding-bottom: 50px;
+  }
+  .section-subTitle {
+    font-size: 1.4rem;
+    padding-bottom: 2px;
+  }
+  .list-feature,
+  .list-detail {
+    font-size: 1.4rem;
+  }
+  .list-feature {
+    font-weight: bold;
+    padding: 0 0 5px 0;
+  }
+  .list-content {
+    margin-left: 26px;
+    display: block;
   }
   /* header ----- */
   .header {
-    position: relative;
+    /* ナビ開いてる時のボタン */
+    /* このクラスを、jQueryで付与・削除する */
   }
   .header-content {
     width: 100%;
     height: 50px;
-    background-color: aqua;
-    padding: 0 15px;
-    position: fixed;
     top: 0;
+    box-shadow: 0px 2px 4px rgba(168, 144, 113, 0.1);
   }
   .header-logo {
     height: 100%;
-    padding: 0;
-    padding-top: 10px;
+    padding: 10px 0 0 15px;
     text-align: left;
   }
   .header-logo img {
     height: 80%;
   }
-  .header-navList {
-    height: 100vh;
-    border: none;
-    width: 100%;
+  .header .reservation_BGcolor, .header .contact_BGcolor {
+    width: 62%;
+    padding: 13px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
   }
   .header .reservation_BGcolor {
-    width: 100%;
-    padding: 0;
-    margin-bottom: 0;
-    position: static;
+    bottom: 148px;
   }
   .header .contact_BGcolor {
-    width: 100%;
-    padding: 0;
-    position: static;
+    bottom: 84px;
   }
-  .header .sp-none {
-    display: none;
-  }
-  /* ----- header */
-  .hamburger {
-    display: block;
+  .header .reservation_box {
     position: fixed;
+    bottom: 40px;
+    right: 0;
+    left: 0;
+  }
+  .header .sp_tel_btn,
+  .header .sp_reservation_btn {
+    position: absolute;
+    top: 0px;
+  }
+  .header .sp_tel_btn {
+    left: 42%;
+    background-color: #f9f3d8;
+    padding: 15px;
+  }
+  .header .sp_tel_btn:hover {
+    background-color: #f0e5b7;
+  }
+  .header .sp_reservation_btn {
+    left: calc(42% + 50px);
+    background-color: #dcebd3;
+    padding: 17px 20px;
+  }
+  .header .sp_reservation_btn:hover {
+    background-color: #8bc889;
+  }
+  .header .hamburger {
+    position: fixed;
+    z-index: 999;
     right: 18px;
     top: 4px;
-    width: 42px;
-    height: 42px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
-    text-align: center;
-    z-index: 999;
   }
-  .hamburger span {
-    position: fixed;
-    display: block;
+  .header .hamburger span {
     position: absolute;
-    width: 30px;
+    width: 20px;
     height: 2px;
-    left: 6px;
-    background: #555;
+    background: #584f4f;
     transition: 0.3s ease-in-out;
   }
-  .hamburger span:nth-child(1) {
-    top: 10px;
+  .header .hamburger span:nth-child(1) {
+    top: 15px;
   }
-  .hamburger span:nth-child(2) {
+  .header .hamburger span:nth-child(2) {
+    top: 22px;
+  }
+  .header .hamburger span:nth-child(3) {
+    top: 28px;
+  }
+  .header .hamburger.active span {
     top: 20px;
   }
-  .hamburger span:nth-child(3) {
-    top: 30px;
-  }
-  /* ナビ開いてる時のボタン */
-  .hamburger.active span:nth-child(1) {
-    top: 16px;
-    left: 6px;
+  .header .hamburger.active span:first-of-type {
     transform: rotate(-45deg);
   }
-  .hamburger.active span:nth-child(2), .hamburger.active span:nth-child(3) {
-    top: 16px;
+  .header .hamburger.active span:not(:first-of-type) {
     transform: rotate(45deg);
   }
-  nav.globalMenuSp {
+  .header nav.globalMenuSp.active {
+    transform: translateX(0%);
+  }
+  .header nav.globalMenuSp {
+    width: 100%;
+    height: 100vh;
     position: fixed;
-    z-index: 2;
     top: 0;
-    left: 0;
     color: #000;
     background: #fff;
     text-align: center;
     transform: translateX(100%);
     transition: all 0.6s;
-    width: 100%;
   }
-  nav.globalMenuSp ul {
-    margin: 0 auto;
-    padding: 0;
-    width: 100%;
+  .header nav.globalMenuSp li:nth-of-type(-n+5) {
+    padding: 0 0 31px 0;
   }
-  nav.globalMenuSp ul li {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
+  .header nav.globalMenuSp li:first-of-type {
+    padding: 48px 0 27px;
   }
-  nav.globalMenuSp ul li:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
-  }
-  nav.globalMenuSp ul li:hover {
+  .header nav.globalMenuSp li:hover {
     background: #ddd;
   }
-  nav.globalMenuSp ul li a {
+  /* ----- header */
+  /* message ----- */
+  .message-topText {
+    font-size: 1.5rem;
+    height: auto;
+    padding: 53px 14.375vw 70px 14.688vw;
+    border-radius: 15px;
+  }
+  .message-topText::before {
+    width: 27px;
+    height: 32px;
+    top: 40px;
+    left: 20px;
+  }
+  .message .txt-border-bottom::after {
+    top: 13px;
+    height: 11px;
+  }
+  .message-subText {
+    padding: 47px 7.5vw 68px 4.688vw;
+    border-radius: 0 15px 15px 0;
+    margin: -25px 14.063vw 0 -15px;
+    font-size: 1.3rem;
+    line-height: calc(24 / 13);
+  }
+  .message_imgBox {
+    bottom: -136px;
+    right: -24px;
+    width: 86.875vw;
+    min-width: 100%;
+    overflow: hidden;
+  }
+  .message_imgBox img {
+    width: 100%;
+  }
+  /* ----- message */
+  /* point ----- */
+  .point {
+    margin-top: 75px;
+  }
+  .point-content {
+    flex-direction: column;
+  }
+  .point-imgWrap {
+    max-width: 100%;
+  }
+  .point-imgWrap img {
+    width: 100%;
+  }
+  .point-textWrap {
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 8px;
+  }
+  .point-topText {
+    font-size: 1.6rem;
+    padding: 20px 0;
+  }
+  .point-subText {
+    font-size: 1.4rem;
+  }
+  .point .reverse {
+    margin: 40px 0;
+  }
+  .point .return_text {
+    order: 2;
+  }
+  .point .txt-border-bottom::after {
+    margin-top: -1px;
+  }
+  /* ----- point */
+  /* stylist ----- */
+  .stylist-textWrap {
+    font-size: 1.6rem;
+    padding: 40px 0 0 0px;
+    height: 100%;
+  }
+  .stylist-name_Post, .stylist-text_hello,
+  .stylist .list-feature,
+  .stylist .list-detail {
+    font-size: 1.4rem;
+  }
+  .stylist-name {
+    font-size: 1.8rem;
+    padding-bottom: 32px;
+  }
+  .stylist-texts_hello {
+    padding-bottom: 24px;
+  }
+  /* ----- stylist */
+  /* menu ----- */
+  .menu .section-title {
+    padding-bottom: 20px;
+  }
+  .menu-pricesContent {
+    background-color: #fff;
+    border-radius: 0px;
+    margin: 0 -15px;
+    padding: 0 15px;
+  }
+  .menu-priceLists {
+    padding: 30px 0 40px;
     display: block;
-    color: #000;
-    padding: 13px 0;
-    text-decoration: none;
   }
-  /* このクラスを、jQueryで付与・削除する */
-  nav.globalMenuSp.active {
-    transform: translateX(0%);
+  .menu-priceList {
+    width: 100%;
   }
-  /* fv ----- */
-  .fv, .message, .point, .stylist, .instgram, .stickarrow,
-  .menu, .hairCatalog, .infomation, .reservation, .btn-tel, .btn-line,
-  .accordion, .contact, .precautions, .footer {
-    display: none;
+  .menu-priceList:not(:last-of-type) {
+    padding-bottom: 40px;
   }
-  .sp-none {
+  .menu-priceTitle {
+    font-size: 1.8rem;
+  }
+  .menu-priceWrap {
+    padding: 0 5px 0 6px;
+    font-size: 1.4rem;
+  }
+  .menu-priceName {
+    padding: 16px 0 14px;
+  }
+  .menu-texts {
+    font-size: 1.4rem;
+    padding: 0 0 30px 0;
+  }
+  .menu-texts p:first-of-type {
+    padding-bottom: 8px;
+  }
+  /* ----- menu */
+  /* hairCatalog ----- */
+  .hairCatalog-contents {
+    margin-bottom: 0;
+  }
+  .hairCatalog-imgWrap {
+    width: 45%;
+    margin-bottom: 0px;
+  }
+  .hairCatalog-imgWrap img {
+    width: 100%;
+  }
+  .hairCatalog-imgWrap:nth-child(3n+2), .hairCatalog-imgWrap:nth-child(3n) {
+    padding-top: 0px;
+  }
+  .hairCatalog-imgWrap:nth-child(2) {
+    margin-top: 15px;
+  }
+  .hairCatalog-imgWrap:nth-child(2n+3) {
+    margin-top: -5px;
+  }
+  .hairCatalog-imgWrap:nth-child(2n+4) {
+    margin-top: 30px;
+  }
+  .hairCatalog-imgText {
+    font-size: 1.2rem;
+    padding: 10px 8px 10px 8px;
+    border-radius: 0 0 10px 10px;
+  }
+  /* ----- hairCatalog */
+  /* infomation ----- */
+  .infomation .lists-wrap {
+    margin: 40px auto;
+  }
+  .infomation-maps {
+    height: 240px;
+  }
+  .infomation-map {
+    height: 100%;
+  }
+  /* ----- infomation */
+  /* reservation ----- */
+  .reservation {
+    margin-bottom: 100px;
+  }
+  .reservation-content {
+    padding: 40px 15px;
+  }
+  .reservation-content > p:not(:first-of-type) {
+    font-size: 1.4rem;
+    line-height: calc(24 / 14);
+  }
+  .reservation-wrap {
+    display: block;
+    margin: 32px 0 0;
+    width: 100%;
+    height: auto;
+  }
+  .reservation-button {
+    width: 100%;
+  }
+  .reservation .btn-tel {
+    padding: 27px 0 26px;
+  }
+  .reservation .btn-tel > p {
+    width: 40px;
+  }
+  .reservation .btn-tel img {
+    width: 100%;
+  }
+  .reservation .btn-tel > div {
+    margin-left: 24px;
+  }
+  .reservation .btn-tel > div a {
+    font-size: 1.6rem;
+  }
+  .reservation .btn-tel > div p {
+    font-size: 1.4rem;
+  }
+  .reservation .btn-hotpepper {
+    padding: 17px 0;
+    margin: 24px 0;
+  }
+  .reservation .btn-line {
+    padding: 20px 0 19px;
+  }
+  .reservation .btn-line a {
+    font-size: 1.6rem;
+    height: 50px;
+  }
+  .reservation .btn-line img {
+    height: 100%;
+    padding-right: 24px;
+  }
+  .reservation .lists-wrap {
+    margin: 40px 0 0 0;
+  }
+  .reservation .list-content:not(:last-child) {
+    border-bottom: 1px solid #584f4f;
+  }
+  /* ----- reservation */
+  /* questions ----- */
+  .accordion-mark {
+    font-size: 1.8rem;
+    padding-right: 16px;
+  }
+  .accordion-container {
+    font-size: 1.4rem;
+  }
+  .accordion-wrap {
+    margin-bottom: 12px;
+  }
+  .accordion-title {
+    padding: 20px 43px 20px 12px;
+    border-radius: 10px;
+  }
+  .accordion-title::before, .accordion-title::after {
+    right: 12px;
+    width: 18px;
+    height: 3px;
+  }
+  .accordion-content {
+    padding: 0 0 24px 12px;
+    border-radius: 0px 0px 10px 10px;
+  }
+  .accordion-content .accordion-mark {
+    padding-right: 18px;
+  }
+  .accordion-content p {
+    padding-top: 0px;
+    line-height: calc(20 / 14);
+  }
+  .accordion-title.open {
+    border-radius: 10px 10px 0px 0px;
+  }
+  /* ----- questions */
+  /* contact ----- */
+  .contact-texts {
+    font-size: 1.4rem;
+    padding: 16px 8px;
+    margin: 0;
+  }
+  .contact form {
+    margin: 40px 0 0 0;
+    font-size: 1.4rem;
+  }
+  .contact__wrap:not(:nth-child(6)) {
+    padding-bottom: 18px;
+  }
+  .contact__wrap textarea {
+    height: 190px;
+    margin-bottom: 18px;
+  }
+  .contact label {
+    height: 24px;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+  .contact label::after {
+    content: "";
+    right: auto;
+    margin: -4px 0 0px 20px;
+  }
+  .contact__button {
+    padding: 22px 104px 17px;
+  }
+  .precautions {
+    height: 200px;
+    font-size: 1.4rem;
+    padding: 16px 14px;
+  }
+  .precautions-title {
+    font-size: 1.4rem;
+    padding-bottom: 12px;
+  }
+  .agree_btn {
+    margin: 49px 0;
+  }
+  .agree_btn input {
+    margin: 0;
+  }
+  .agree_btn label {
+    padding: 4px 0 0 18px;
+  }
+  /* ----- contact */
+  /* reservation ----- */
+  /* ----- reservation */
+  /* .message, .point, .stylist, 
+  .menu, .hairCatalog, .infomation,
+  .reservation, .questions, .contact,
+  */
+  .fv, .footer {
     display: none;
   }
 }

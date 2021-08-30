@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* 変数定義 */
 /* Width */
+/* 290 */
 /* Height */
 /* z-index */
 /* Color */
@@ -32,8 +33,7 @@
 }
 
 .header-list {
-  padding-left: 60px;
-  padding-bottom: 28px;
+  padding: 0 0 28px 60px;
 }
 
 .header-navBox_bottom {
@@ -181,8 +181,11 @@
 }
 
 .message_imgBox {
+  max-width: 435px;
+  position: absolute;
+  right: 0;
+  bottom: -60px;
   text-align: right;
-  margin-top: calc(206px - 405px);
   z-index: 5;
 }
 
@@ -190,7 +193,6 @@
 /* point ----- */
 .point-content {
   display: flex;
-  flex-wrap: nowrap;
 }
 
 .point-imgWrap {
@@ -219,20 +221,20 @@
   margin: 60px 0;
 }
 
-.point .return1 {
+.point .return_text {
   order: 1;
   padding-left: 0px;
 }
 
-.point .return1 .point-subText {
-  max-width: calc($point-subText_w + 20px);
+.point .return_text .point-subText {
+  max-width: calc(370px + 20px);
 }
 
-.point .return2 {
+.point .return_img {
   order: 2;
 }
 
-.point .return2 img {
+.point .return_img img {
   max-width: 100%;
 }
 
@@ -248,60 +250,38 @@
 
 .stylist-textWrap {
   font-size: 1.6rem;
-  padding-top: 60px;
-  padding-left: 120px;
+  padding: 60px 0 0 120px;
   height: 100%;
 }
 
 .stylist-name {
   font-size: 2.2rem;
-  padding-bottom: 60px;
+  font-weight: bold;
+  padding: 4px 0 60px;
 }
 
 .stylist-texts_hello {
-  height: 206px;
   max-width: 720px;
-  padding-bottom: 24px;
+  padding-bottom: 55px;
 }
 
 .stylist-text_hello {
   line-height: calc(32 / 16);
 }
 
-/* ----- stylist */
-.lists-wrap {
+.stylist .lists-wrap {
   margin-bottom: 40px;
-  position: relative;
 }
 
-.lists-wrap:after {
-  content: "";
-  width: 14px;
-  height: 100%;
-  background-color: #dcebd3;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 5px;
-}
-
-.list-content {
-  margin-left: 28px;
-  display: flex;
+.stylist .list-content {
   max-width: 390px;
-  padding: 15px 0 14px;
-  font-size: 1.6rem;
 }
 
-.list-content:not(:last-child) {
-  border-bottom: 1px solid #d3d3d3;
-}
-
-.list-feature {
-  padding-left: 6px;
+.stylist .list-feature {
   width: 150px;
 }
 
+/* ----- stylist */
 .stickarrow {
   margin-left: -9px;
   width: 178px;
@@ -367,7 +347,7 @@
 
 .menu-priceList {
   width: 50%;
-  width: 314px;
+  max-width: 314px;
 }
 
 .menu-priceList:nth-child(1), .menu-priceList:nth-child(2) {
@@ -395,8 +375,7 @@
 
 .menu-texts {
   font-size: 1.6rem;
-  padding-left: 80px;
-  padding-bottom: 60px;
+  padding: 0 0 60px 80px;
 }
 
 /* ----- menu */
@@ -425,7 +404,7 @@
   background-color: #dcebd3;
   font-size: 1.4rem;
   font-weight: bold;
-  padding: 24px 0px 24px 20px;
+  padding: 24px 20px 24px 20px;
   border-radius: 0 0 20px 20px;
 }
 
@@ -440,30 +419,13 @@
   max-width: 727px;
 }
 
-.infomation .list-content {
-  max-width: 100%;
-}
-
 .infomation-maps {
-  text-align: center;
   max-width: 840px;
+  margin: 0 auto;
 }
 
 .infomation-map {
-  max-width: 840px;
   width: 100%;
-}
-
-.lists-margin {
-  margin: 60px 0 60px 120px;
-}
-
-.lists-margin .list-content {
-  max-width: 690px;
-}
-
-.lists-margin .list-feature {
-  width: 240px;
 }
 
 /* ----- infomation */
@@ -478,7 +440,7 @@
   padding: 60px 0;
 }
 
-.reservation-content p {
+.reservation-content > p:not(:first-of-type) {
   font-size: 1.6rem;
   line-height: calc(32 / 16);
 }
@@ -505,8 +467,16 @@
   padding: 0;
 }
 
-.reservation .lists-wrap:after {
+.reservation .lists-wrap {
+  margin: 60px 0 60px 120px;
+}
+
+.reservation .lists-wrap::after {
   background-color: #fff;
+}
+
+.reservation .list-content {
+  max-width: 690px;
 }
 
 .reservation .list-content:not(:last-child) {
@@ -534,6 +504,10 @@
   color: #584f4f;
 }
 
+.btn-tel > div p {
+  font-size: 1.6rem;
+}
+
 .btn-line a {
   font-size: 2rem;
   font-weight: bold;
@@ -548,6 +522,11 @@
 
 /* ----- reservation */
 /* questions ----- */
+.accordion-mark {
+  font-size: 2.5rem;
+  padding-right: 30px;
+}
+
 .accordion-container {
   max-width: 720px;
   margin: 0 auto;
@@ -561,7 +540,7 @@
 .accordion-title {
   display: flex;
   align-items: center;
-  padding: 24px 0 24px 40px;
+  padding: 24px 70px 24px 40px;
   position: relative;
   margin: 0;
   background-color: #fff;
@@ -570,49 +549,27 @@
   cursor: pointer;
 }
 
-.accordion-title::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 35px;
-  width: 24px;
-  height: 2px;
-  transform: rotate(90deg);
-  background: #707070;
-  transition: all .3s ease-in-out;
-}
-
-.accordion-title::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 35px;
-  width: 24px;
-  height: 2px;
-  background: #707070;
-  transition: all .2s ease-in-out;
-}
-
-.accordion-mark {
-  font-size: 2.5rem;
-  padding-right: 30px;
-}
-
 .accordion-title:hover, .accordion-title:active {
   background-color: #dcebd3;
 }
 
-.accordion-title.open {
-  background-color: #fff;
-  border-radius: 20px 20px 0px 0px;
+.accordion-title::before, .accordion-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  width: 24px;
+  height: 2px;
+  background: #707070;
 }
 
-.accordion-title.open::before {
-  transform: rotate(180deg);
+.accordion-title::before {
+  transform: rotate(90deg);
+  transition: all .3s ease-in-out;
 }
 
-.accordion-title.open::after {
-  opacity: 0;
+.accordion-title::after {
+  transition: all .2s ease-in-out;
 }
 
 .accordion-content {
@@ -631,6 +588,19 @@
   max-width: 530px;
   padding-top: 5px;
   line-height: calc(32 / 16);
+}
+
+.accordion-title.open {
+  background-color: #fff;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.accordion-title.open::before {
+  transform: rotate(180deg);
+}
+
+.accordion-title.open::after {
+  opacity: 0;
 }
 
 /* ----- questions */
@@ -669,8 +639,10 @@
 
 .contact__wrap > input, .contact__wrap textarea {
   box-sizing: border-box;
+  border-radius: 5px;
   max-width: 423px;
   width: 100%;
+  border: 1px solid #584f4f;
 }
 
 .contact__wrap > input {
@@ -708,6 +680,7 @@
 }
 
 .contact__button {
+  font-weight: bold;
   padding: 20px 104px;
   background-color: #E3E3E3;
   border: none;
@@ -726,11 +699,12 @@
 .precautions {
   width: 100%;
   height: 200px;
-  height: 400px;
   font-size: 1.6rem;
   overflow-y: scroll;
   background-color: #fff;
   padding: 16px 17px;
+  border: 1px solid #584f4f;
+  border-radius: 5px;
 }
 
 .precautions-title {
@@ -762,7 +736,6 @@
 .footer {
   height: 567px;
   text-align: center;
-  max-width: calc(100% - (260px));
   margin: 0 0 0 auto;
 }
 
@@ -774,7 +747,7 @@
   padding: 56px 0 16px;
 }
 
-.footer_box {
+.footer-box {
   font-size: 1.6rem;
   padding: 20px 0 24px;
   border-top: 1px solid #fff;
@@ -785,18 +758,18 @@
   margin: 40px auto 48px;
 }
 
-.footer_list {
+.footer-list {
   padding-bottom: 10px;
   display: inline-block;
 }
 
-.footer_tel_icon {
+.footer-tel_icon {
   display: flex;
   align-items: center;
   height: 20px;
 }
 
-.footer_tel_icon a {
+.footer-tel_icon a {
   padding-left: 5px;
 }
 

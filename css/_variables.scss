@@ -9,16 +9,40 @@ $WideWidth: 1200px;
 
 $fv-colorBox_w: 449px;
 
-$message-topText_w: 720px;
-$message-subText_w: 601px;
+$message-topText_mw: 720px;
+$message-subText_mw: 601px;
+$message-imgBox_mw: 435px;
 
-$point-subText_w: 370px;
+$point-subText_mw: 370px;
 
-$stylist-texts_hello_w: 720px;
+$stylist-texts_hello_mw: 720px;
 
-$list-content_w: 390px;
+$stylist--list-content_mw: 390px;
+$stylist--list-feature_w: 150px;
 
-$hairCatalog-imgWrap_w: 256px;
+$menu-priceList_mw: 314px;
+
+$hairCatalog-imgWrap_mw: 256px;
+
+$infomation--lists-wrap_mw: 727px;
+$infomation-maps_mw: 840px;
+
+$infomation--reservation--list-feature_w: 240px;
+
+$reservation-wrap_mw: 957px;
+$reservation--list-button_w: 256px;
+$reservation--list-content_mw: 690px;
+
+$accordion-container_mw: 720px;
+$accordion-content-p_mw: 530px;
+
+$contact-texts--form_mw: 720px;
+$contact-form--label_mw: calc(720px - 430px);
+/* 290 */
+$contact-form--input-textarea_mw: 423px;
+
+$foote-box_mw: 320px;
+
 
 
 /* Height */
@@ -34,6 +58,19 @@ $message-topText_h: 338px;
 
 $stylist-texts_hello_h: 206px;
 
+$instgram-wrap_h: 180px;
+
+$reservation-wrap_h: 118px;
+
+$contact-form--input_h: 40px;
+$contact-form--textarea_h: 174px;
+
+$precautions_h: 200px;
+// $precautions_h: 400px;
+
+$footer_h: 567px;
+
+
 /* z-index */
 $layer: (
   header: 900,
@@ -46,9 +83,6 @@ $layer: (
   imgBox: 5,
 );
 // z-index: map-get($layer, under);
-$header-z: 900;
-$header-ham: 999;
-$background: -1;
 
 /* Color */
 $mainColor: #8bc889;
