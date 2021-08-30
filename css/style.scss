@@ -24,8 +24,7 @@
   }
   
   &-list {
-    padding-left: 60px;
-    padding-bottom: 28px;
+    padding: 0 0 28px 60px;
   }
   
   &-navBox_bottom {
@@ -94,7 +93,7 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
     // width: 152px;
-    height: $fv-text_h;
+    height: 382px;
     line-height: 2;
     z-index: map-get($layer, text);
     
@@ -109,8 +108,8 @@
     right: 0;
     background-color: $mainColor;
     opacity: .8;
-    width: $fv-colorBox_w;
-    height: $fv-colorBox_h;
+    width: 449px;
+    height: 310px;
     z-index: map-get($layer, zero);
     border-radius: 30px 0 0 30px;
     mix-blend-mode: overlay;
@@ -128,8 +127,8 @@
   &-topText {
     font-size: 2rem;
     line-height: calc(48 / 20);
-    max-width: $message-topText_w;
-    height: $message-topText_h;
+    max-width: 720px;
+    height: 338px;
     border: 1px solid $mainColor;
     border-radius: 30px;
     margin: 0 auto;
@@ -162,15 +161,18 @@
     font-size: 1.6rem;
     line-height: calc(32 / 16);
     padding: 64px 120px;
-    max-width: $message-subText_w;
+    max-width: 601px;
     background-color: $l-green;
     border-radius: 30px;
     z-index: map-get($layer, text);
   }
 
   &_imgBox {
+    max-width: 435px;
+    position: absolute;
+    right: 0;
+    bottom: -60px;
     text-align: right;
-    margin-top: calc(206px - 405px);
     z-index: map-get($layer, imgBox);
   }
 }
@@ -180,7 +182,6 @@
 .point {
   &-content {
     display: flex;
-    flex-wrap: nowrap;
   }
 
   &-imgWrap {
@@ -202,23 +203,22 @@
 
   &-subText {
     font-size: 1.6rem;
-    max-width: $point-subText_w;
+    max-width: 370px;
   }
 
   .reverse {
     margin: 60px 0;
   }
   
-  .return1 {
+  .return_text {
     order: 1;
     padding-left: 0px;
     .point-subText {
-      // max-width: 390px;
-      max-width: calc($point-subText_w + 20px);
+      max-width: calc(370px + 20px);
     }
   }
 
-  .return2 {
+  .return_img {
     order: 2;
     img {
       max-width: 100%;
@@ -238,59 +238,37 @@
 
   &-textWrap {
     font-size: 1.6rem;
-    padding-top: 60px;
-    padding-left: 120px;
+    padding: 60px 0 0 120px;
     height: 100%;
   }
 
   &-name {
     font-size: 2.2rem;
-    padding-bottom: 60px;
+    font-weight: bold;
+    padding: 4px 0 60px;
   }
 
   &-texts_hello {
-    // height: 182px;
-    height: $stylist-texts_hello_h;
-    max-width: $stylist-texts_hello_w;
-    padding-bottom: 24px;
+    max-width: 720px;
+    padding-bottom: 55px;
   }
   
   &-text_hello {
     line-height: calc(32 / 16);
   }
+
+  .lists-wrap {
+    margin-bottom: 40px;
+  }
+  .list-content {
+    max-width: 390px;
+  }
+  .list-feature {
+    width: 150px;
+  }
 }
 /* ----- stylist */
 
-.lists-wrap {
-  margin-bottom: 40px;
-  position: relative;
-  &:after{
-    content: "";
-    width: 14px;
-    height: 100%;
-    background-color: $l-green;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 5px;
-  }
-}
-
-.list-content {
-  margin-left: 28px;
-  display: flex;
-  max-width: $list-content_w;
-  padding: 15px 0 14px;
-  font-size: 1.6rem;
-
-  &:not(:last-child) {
-    border-bottom: 1px solid $d3;
-  }
-}
-.list-feature {
-  padding-left: 6px;
-  width: 150px;
-}
 
 // 矢印
 .stickarrow {
@@ -310,9 +288,8 @@
     height: 180px;
     width: auto;
     position: relative;
-    // display: flex;
-    // align-items: flex-end;
   }
+  
   &-icon {
     display: inline-block;
     position: absolute;
@@ -360,7 +337,7 @@
 
   &-priceList {
     width: 50%;
-    width: 314px;
+    max-width: 314px;
     
     &:nth-child(1),
     &:nth-child(2) {
@@ -388,8 +365,7 @@
 
   &-texts {
     font-size: 1.6rem;
-    padding-left: 80px;
-    padding-bottom: 60px;
+    padding: 0 0 60px 80px;
   }
 }
 /* ----- menu */
@@ -403,7 +379,7 @@
     margin-bottom: -20px;
   }
   &-imgWrap {
-    max-width: $hairCatalog-imgWrap_w;
+    max-width: 256px;
     margin-bottom: 20px;
     &:nth-child(3n+2) {
       padding-top: 40px;
@@ -416,7 +392,7 @@
     background-color: $l-green;
     font-size: 1.4rem;
     font-weight: bold;
-    padding: 24px 0px 24px 20px;
+    padding: 24px 20px 24px 20px;
     border-radius: 0 0 20px 20px;
   }
 }
@@ -431,26 +407,12 @@
     margin: 60px auto;
     max-width: 727px;
   }
-  .list-content {
-    max-width: 100%;
-  }
   &-maps {
-    text-align: center;
     max-width: 840px;
+    margin: 0 auto;
   }
   &-map {
-    max-width: 840px;
     width: 100%;
-  }
-}
-
-.lists-margin {
-  margin: 60px 0 60px 120px;
-  .list-content { 
-    max-width: 690px;
-  }
-  .list-feature {
-    width: 240px;
   }
 }
 /* ----- infomation */
@@ -464,7 +426,7 @@
   &-content {
     padding: 60px 0;
 
-    p {
+    & > p:not(:first-of-type) {
       font-size: 1.6rem;
       line-height: calc(32 / 16);
     }
@@ -490,12 +452,20 @@
     padding: 0;
   }
 
-  .lists-wrap:after {
-    background-color: #fff;
+  .lists-wrap {
+    margin: 60px 0 60px 120px;
+    &::after {
+      background-color: #fff;
+    }
   }
 
-  .list-content:not(:last-child) {
-    border-bottom: 1px solid #fff;
+  .list{
+    &-content {
+      max-width: 690px;
+      &:not(:last-child) {
+        border-bottom: 1px solid #fff;
+      }
+    }
   }
 }
 
@@ -513,6 +483,9 @@
       font-size: 2rem;
       font-weight: bold;
       color: $textColor;
+    }
+    p {
+      font-size: 1.6rem;
     }
   }
 }
@@ -535,20 +508,25 @@
 /* questions ----- */
 // accordion
 .accordion {
+  &-mark {
+    font-size: 2.5rem;
+    padding-right: 30px;
+  }
+
   &-container {
-    // width: 300px;
     max-width: 720px;
     margin: 0 auto;
     font-size: 1.6rem;
   }
+
   &-wrap {
     margin-bottom: 16px;
   }
+
   &-title {
     display: flex;
     align-items: center;
-    
-    padding: 24px 0 24px 40px;
+    padding: 24px 70px 24px 40px;
     position: relative;
     margin: 0;
     background-color: #fff;
@@ -556,46 +534,51 @@
     color: $textColor;
     cursor: pointer;
 
-    &::before {
+    &:hover, &:active { 
+      background-color: $l-green;
+    }
+
+    &::before, &::after {
       content: "";
       position: absolute;
       top: 50%;
       right: 35px;
       width: 24px;
       height: 2px;
-      transform: rotate(90deg);
       background: $open-color;
+    }
+
+    &::before {
+      transform: rotate(90deg);
       transition: all .3s ease-in-out;
     }
     &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      right: 35px;
-      width: 24px;
-      height: 2px;
-      background: $open-color;
       transition: all .2s ease-in-out;
     }
   }
-  &-mark {
-    font-size: 2.5rem;
-    padding-right: 30px;
+  
+  
+  &-content {
+    display: none;
+    padding: 0 0 24px 40px;
+    background-color: #fff;
+    border-radius: 0px 0px 20px 20px;
+  
+    dd {
+      display: flex;
+      flex-wrap:nowrap;
+    }
+    p {
+      max-width: 530px;
+      padding-top: 5px;
+      line-height: calc(32 / 16);
+    }
   }
 }
 
-// .accordion-container
-.accordion-title {
-  &:hover, &:active { 
-    background-color: $l-green;
-  }
-}
 .accordion-title.open { 
   background-color: #fff;
   border-radius: 20px 20px 0px 0px;
-}
-
-.accordion-title.open {
   &::before {
     transform: rotate(180deg);
   }
@@ -603,22 +586,7 @@
     opacity: 0;
   }
 }
-.accordion-content {
-  display: none;
-  padding: 0 0 24px 40px;
-  background-color: #fff;
-  border-radius: 0px 0px 20px 20px;
 
-  dd {
-    display: flex;
-    flex-wrap:nowrap;
-  }
-  p {
-    max-width: 530px;
-    padding-top: 5px;
-    line-height: calc(32 / 16);
-  }
-}
 //accordion
 /* ----- questions */
 
@@ -659,8 +627,10 @@
 
     > input, textarea {
       box-sizing: border-box;
+      border-radius: 5px;
       max-width: 423px;
       width: 100%;
+      border: 1px solid $textColor;
     }
 
     > input {
@@ -690,12 +660,14 @@
     content: "必須";
     background-color: #F9C4C4;
   }
+
   .optional::after {
     content: "任意";
     border: 1px solid $textColor;
   }
 
   &__button {
+    font-weight: bold;
     padding: 20px 104px;
     background-color: #E3E3E3;
     border: none;
@@ -710,6 +682,7 @@
     }
   }
 }
+
 // precautions
 .precautions  {
   &-title {
@@ -719,12 +692,15 @@
   }
   width: 100%;
   height: 200px;
-  height: 400px;
+  // height: 400px;
   font-size: 1.6rem;
   overflow-y: scroll;
   background-color: #fff;
   padding: 16px 17px;
+  border: 1px solid $textColor;
+  border-radius: 5px;
 }
+
 .agree_btn {
   display: flex;
   align-items: center;
@@ -745,11 +721,8 @@
 
 /* footer ----- */
 .footer {
-  // background-color: $footer_BGC;
   height: 567px;
   text-align: center;
-  // line-height: 150px;
-  max-width: calc(100% - (260px));
   margin: 0 0 0 auto;
 
   a {
@@ -758,7 +731,7 @@
   &-logo {
     padding: 56px 0 16px;
   }
-  &_box {
+  &-box {
     font-size: 1.6rem;
     padding: 20px 0 24px;
     border-top: 1px solid #fff;
@@ -768,11 +741,11 @@
     text-align: left;
     margin: 40px auto 48px;
   }
-  &_list {
+  &-list {
     padding-bottom: 10px;
     display: inline-block;
   }
-  &_tel_icon {
+  &-tel_icon {
     display: flex;
     align-items: center;
     height: 20px;

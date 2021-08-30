@@ -20,8 +20,10 @@
 // .questions {background-color: blueviolet;}
 
 /* 共通部分 */
-main {
+main, footer {
   max-width: calc(100% - (260px));
+}
+main {
   margin: 0 0 0 auto;
   color: $textColor;
   background-color: $subColor;
@@ -32,12 +34,14 @@ main {
   margin-left: 83px;
 }
 
+.pc-none {display: none;}
 
 .inner {
   max-width: $sectionWidth;
   margin: 0 auto;
   padding: 0 15px;
 }
+
 .inner > section {
   padding-bottom: 150px;
   &:last-child {
@@ -195,5 +199,39 @@ main {
   &::after {
     content: "";
     background-color: $l-green;
+  }
+}
+
+// 左側の棒線ありのリスト表
+.lists {
+  &-wrap {
+    position: relative;
+    &:after{
+      content: "";
+      width: 14px;
+      height: 100%;
+      background-color: $l-green;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 5px;
+    }
+  }
+}
+
+.list {
+  &-content {
+    margin-left: 28px;
+    display: flex;
+    padding: 15px 0 14px;
+    font-size: 1.6rem;
+    &:not(:last-child) {
+      border-bottom: 1px solid $d3;
+    }
+  }
+
+  &-feature {
+    padding-left: 6px;
+    width: 240px;
   }
 }

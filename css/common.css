@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* 変数定義 */
 /* Width */
+/* 290 */
 /* Height */
 /* z-index */
 /* Color */
@@ -8,8 +9,11 @@
 /* footer_Color */
 /* background-color */
 /* 共通部分 */
-main {
+main, footer {
   max-width: calc(100% - (260px));
+}
+
+main {
   margin: 0 0 0 auto;
   color: #584f4f;
   background-color: #fcfaf5;
@@ -22,6 +26,10 @@ main {
 
 .margin-left {
   margin-left: 83px;
+}
+
+.pc-none {
+  display: none;
 }
 
 .inner {
@@ -176,5 +184,36 @@ main {
 .light-green::after {
   content: "";
   background-color: #dcebd3;
+}
+
+.lists-wrap {
+  position: relative;
+}
+
+.lists-wrap:after {
+  content: "";
+  width: 14px;
+  height: 100%;
+  background-color: #dcebd3;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+}
+
+.list-content {
+  margin-left: 28px;
+  display: flex;
+  padding: 15px 0 14px;
+  font-size: 1.6rem;
+}
+
+.list-content:not(:last-child) {
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.list-feature {
+  padding-left: 6px;
+  width: 240px;
 }
 /*# sourceMappingURL=common.css.map */

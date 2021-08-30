@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
-  <!-- <link rel="stylesheet" href="css/slick.css"> -->
 </head>
 
 <body>
@@ -23,6 +22,17 @@
       <h1 class="header-logo">
         <a href="#"><img src="image/menubar_logo.png" alt="シナジーサロンのロゴ画像"></a>
       </h1>
+
+      <ul class="pc-none">
+        <li class="sp_tel_btn">
+          <a href="tel:012-345-6789">
+            <img src="image/top_icon_tel-2.png" alt="電話のアイコン">
+          </a>
+        </li>
+        <li class="sp_reservation_btn">
+          <a  href="#reservation" class="header-listLink">ご予約</a>
+        </li>
+      </ul>
       
       <div class="hamburger">
         <span></span>
@@ -37,20 +47,19 @@
           <li class="header-list"><a href="#menu" class="header-listLink">メニュー</a></li>
           <li class="header-list"><a href="#hairCatalog" class="header-listLink">ヘアカタログ</a></li>
           <li class="header-list"><a href="#infomation" class="header-listLink">店舗案内</a></li>
-          <li class="header-list"><a href="#questions" class="header-listLink">よくあるご質問</a></li>
+          <li class="header-list sp-none"><a href="#questions" class="header-listLink">よくあるご質問</a></li>
           
-          <li>
-            <a  class="reservation_BGcolor" href="#reservation" class="header-listLink">ご予約はこちら
+          <li class="reservation_BGcolor">
+            <a  href="#reservation" class="header-listLink">ご予約はこちら
               <div class="reservation_box">
                 <img src="image/top_icon_tel-2.png" alt="電話のアイコン">
-                <span class="sp-none">012-345-6789</span>
-                <!-- <a href="tel:012-345-6789" class="sp-none">012-345-6789</a> -->
+                <a href="tel:012-345-6789">012-345-6789</a>
               </div>
             </a>
           </li>
           
-          <li>
-            <a class="contact_BGcolor" href="#contact" class="header-listLink">お問い合わせ</a>
+          <li class="contact_BGcolor">
+            <a href="#contact" class="header-listLink">お問い合わせ</a>
           </li>
           
           <!-- <div class="header-navBox_bottom"></div> 不要かも SP版で要検証 -->
@@ -77,7 +86,7 @@
     <section id="message" class="message">
       <div class="message-texts">
         <h3 class="message-topText">シナジーサロンは、<br>
-          「あなただけの美容時間」を過ごすための、<br>
+          「あなただけの美容時間」を<br class="pc-none">過ごすための、<br>
           <span class="txt-border-bottom">完全予約制個室サロン</span>です。</h3>
         <p class="message-subText">
           美容室のほとんどは、複数のスタッフと複数のお客様が１つの空間に集まります。<br>
@@ -85,7 +94,8 @@
           しかし、それだとお客様がリラックスできないと感じ、当サロンは完全予約制で他のお客様とバッティングをしない１対１の空間をご提供いたします。
         </p>
         <div class="message_imgBox">
-          <img src="image/topMessage_img.png" alt="店内の写真" class="message_img">
+          <img class="sp-none" src="image/topMessage_img.png" alt="店内の写真" class="message_img">
+          <img class="pc-none" src="image/topMessage_img_sp.png" alt="店内の写真" class="message_img">
         </div>
       </div>
     </section> <!-- message -->
@@ -105,10 +115,10 @@
       </div> <!-- point-content -->
 
       <div class="point-content reverse">
-        <div class="point-imgWrap return2">
+        <div class="point-imgWrap return_img">
           <img src="image/kodawari_img_2.png" alt="お子様のカットの様子" class="point-img">
         </div>
-        <div class="point-textWrap return1">
+        <div class="point-textWrap return_text">
           <h2 class="point-topText"><span class="txt-border-bottom light-green">お子様や、パートナーとご一緒に。</span></h2>
           <p class="point-subText">2名様まで、同時に施術が可能です。<br>また、キッズスペースもあるため、小さなお子様とのご来店も可能です。</p>
         </div>
@@ -141,7 +151,7 @@
 
           <div class="stylist-texts_hello">
             <p class="stylist-text_hello">はじめまして、シナジーサロン代表の支那寺 太郎です。<br>
-            シナジーサロンは、お客様が本当にリラックスできる環境を作りたく2020年3月にオープンいたしました。<br>
+            シナジーサロンは、お客様が本当にリラックスできる環境を作りたく2020年3月にオープンいたしました。<br><br class="pc-none">
             お店に入ってから出るまで、シナジーサロンはあなた専門の美容空間になります。<br>
             ご要望やご相談をぜひお聞かせください。私が解決いたします。
             </p>
@@ -190,77 +200,95 @@
         <div class="menu-priceLists">
           <div class="menu-priceList">
             <ul>
-              <p class="menu-priceTitle">カット</p>
+              <li><p class="menu-priceTitle">カット</p></li>
               
-              <dl>
-                <div class="menu-priceWrap">
+              <li>
+                <dl class="menu-priceWrap">
                   <dt class="menu-priceName">カット</dt>
                   <dd class="menu-price">¥ 6,000</dd>
-                </div>
-                <div class="menu-priceWrap">
+                </dl>
+              </li>
+
+              <li>
+                <dl class="menu-priceWrap">
                   <dt class="menu-priceName">カット ＆ スタイリング</dt>
                   <dd class="menu-price">¥ 7,000</dd>
-                </div>
-                <div class="menu-priceWrap">
+                </dl>
+              </li>
+
+              <li>
+                <dl class="menu-priceWrap">
                   <dt class="menu-priceName">キッズカット</dt>
                   <dd class="menu-price">¥ 2,000</dd>
-                </div>
-              </dl>
+                </dl>
+              </li>
             </ul>
           </div> <!-- menu-priceList -->
           
           <div class="menu-priceList">
             <ul>
-              <p class="menu-priceTitle">パーマ</p>
+              <li><p class="menu-priceTitle">パーマ</p></li>
               
-              <dl>
-                <div class="menu-priceWrap">
+              <li>
+                <dl class="menu-priceWrap">
                   <dt class="menu-priceName">スタンダードパーマ</dt>
                   <dd class="menu-price">¥ 4,500～</dd>
-                </div>
-                <div class="menu-priceWrap">
+                </dl>
+              </li>
+
+              <li>
+                <dl class="menu-priceWrap">
                   <dt class="menu-priceName">サプリメントパーマ</dt>
                   <dd class="menu-price">¥ 5,000～</dd>
-                </div>
-                <div class="menu-priceWrap">
+                </dl>
+              </li>
+              
+              <li>
+                <dl class="menu-priceWrap">
                   <dt class="menu-priceName">デジタルパーマ</dt>
                   <dd class="menu-price">¥ 4,500～</dd>
-                </div>
-                <div class="menu-priceWrap">
+                </dl>
+              </li>
+              
+              <li>
+                <dl class="menu-priceWrap">
                   <dt class="menu-priceName">縮毛矯正</dt>
                   <dd class="menu-price">¥ 16,000～</dd>
-                </div>
-              </dl>
+                </dl>
+              </li>
             </ul>
           </div> <!-- menu-priceList -->
           
           <div class="menu-priceList">
             <ul>
-              <p class="menu-priceTitle">カラー</p>
+              <li><p class="menu-priceTitle">カラー</p></li>
               
-              <dl>
-                <div class="menu-priceWrap">
+              <li>
+                <dl class="menu-priceWrap">
                   <dt class="menu-priceName">デザイニングカラー</dt>
                   <dd class="menu-price">¥ 5,000～</dd>
-                </div>
-              </dl>
+                </dl>
+              </li>
             </ul>
           </div> <!-- menu-priceList -->
           
           <div class="menu-priceList">
             <ul>
-              <p class="menu-priceTitle">ヘアケア</p>
+              <li><p class="menu-priceTitle">ヘアケア</p></li>
               
-              <dl>
-                <div class="menu-priceWrap">
+              <li>
+                <dl class="menu-priceWrap">
                   <dt class="menu-priceName">髪質改善</dt>
                   <dd class="menu-price">¥ 3,500</dd>
-                </div>
-                <div class="menu-priceWrap">
+                </dl>
+              </li>
+
+              <li>
+                <dl class="menu-priceWrap">
                   <dt class="menu-priceName">高濃度「炭酸泉」ソーダスパ</dt>
                   <dd class="menu-price">¥ 1,000</dd>
-                </div>
-              </dl>
+                </dl>
+              </li>
             </ul>
           </div> <!-- menu-priceList -->
 
@@ -289,7 +317,7 @@
 
         <div class="hairCatalog-imgWrap">
           <img src="image/catalog_card3_img.png" alt="10代未満 / キッズカット" class="hairCatalog-img">
-          <p class="hairCatalog-imgText">10代未満 / キッズカット</p>
+          <p class="hairCatalog-imgText">10代未満 / キッズ<br class="pc-none">カット</p>
         </div> <!-- hairCatalog-imgWrap -->
 
         <div class="hairCatalog-imgWrap">
@@ -304,7 +332,7 @@
 
         <div class="hairCatalog-imgWrap">
           <img src="image/catalog_card6_img.png" alt="20代 男性  / スタンダードパーマ" class="hairCatalog-img">
-          <p class="hairCatalog-imgText">20代 男性  / スタンダードパーマ</p>
+          <p class="hairCatalog-imgText">20代 男性  / スタン<br class="pc-none">ダードパーマ</p>
         </div> <!-- hairCatalog-imgWrap -->
 
       </div> <!-- hairCatalog-contents -->
@@ -371,7 +399,7 @@
           </div>
         </button>
 
-        <button class="reservation-button"><!-- HotPepper -->
+        <button class="reservation-button btn-hotpepper"><!-- HotPepper -->
           <a href=""><img src="image/reservation_buttons_hpb_img.png" alt="HotPepperへ移動"></a>
         </button>
 
@@ -381,7 +409,7 @@
 
       </div> <!-- reservation-wrap -->
       
-      <dl class="lists-wrap lists-margin">
+      <dl class="lists-wrap">
         <div class="list-content">
           <dt class="list-feature">住所・アクセス</dt>
           <dd class="list-detail">〒000-000 三重県アラブ市○○1-1-1<br>○○駅より車で5分</dd>
@@ -591,11 +619,11 @@
   <h2 class="footer-logo"><img src="image/footer_logo.png" alt="シナジーサロンのロゴ画像"></h2>
   <p><a href="" class="footer-insta_icon"><img src="image/footer_instagram.png" alt="インスタグラムのアイコン"></a></p>
 
-  <div class="footer_box">
-    <p class="footer_list">〒000-000 三重県アラブ市○○1-1-1</p>
-    <p class="footer_list">営業時間　9:30～18:30（最終受付18:30）</p>
-    <p class="footer_list">月曜定休日（不定休あり）</p>
-    <p class="footer_tel_icon">
+  <div class="footer-box">
+    <p class="footer-list">〒000-000 三重県アラブ市○○1-1-1</p>
+    <p class="footer-list">営業時間　9:30～18:30（最終受付18:30）</p>
+    <p class="footer-list">月曜定休日（不定休あり）</p>
+    <p class="footer-tel_icon">
       <img src="image/top_icon_tel.png" alt="電話のアイコン">
       <a href="tel:012-345-6789">012-345-6789</a>
     </p>
